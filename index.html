@@ -72,13 +72,9 @@
 		<nav class="header-nav">
 			<div class="social">
 				
-					<a class="github" target="_blank" href="#" title="github"><i class="icon-github"></i></a>
-		        
 					<a class="weibo" target="_blank" href="#" title="weibo"><i class="icon-weibo"></i></a>
 		        
-					<a class="rss" target="_blank" href="#" title="rss"><i class="icon-rss"></i></a>
-		        
-					<a class="zhihu" target="_blank" href="http://www.baidu.com" title="zhihu"><i class="icon-zhihu"></i></a>
+					<a class="zhihu" target="_blank" href="#" title="zhihu"><i class="icon-zhihu"></i></a>
 		        
 			</div>
 		</nav>
@@ -113,13 +109,9 @@
 			<nav class="header-nav">
 				<div class="social">
 					
-						<a class="github" target="_blank" href="#" title="github"><i class="icon-github"></i></a>
-			        
 						<a class="weibo" target="_blank" href="#" title="weibo"><i class="icon-weibo"></i></a>
 			        
-						<a class="rss" target="_blank" href="#" title="rss"><i class="icon-rss"></i></a>
-			        
-						<a class="zhihu" target="_blank" href="http://www.baidu.com" title="zhihu"><i class="icon-zhihu"></i></a>
+						<a class="zhihu" target="_blank" href="#" title="zhihu"><i class="icon-zhihu"></i></a>
 			        
 				</div>
 			</nav>
@@ -210,13 +202,133 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2013/09/21/hello-world/">CSS垂直水平居中的问题</a>
+      <a class="article-title" href="/2013/12/28/hello-world/">初识jQuery</a>
     </h1>
   
 
         
-        <a href="/2013/09/21/hello-world/" class="archive-article-date">
-  	<time datetime="2013-09-21T14:10:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2013-09-21</time>
+        <a href="/2013/12/28/hello-world/" class="archive-article-date">
+  	<time datetime="2013-12-28T14:10:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2013-12-28</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>jQuery是一款非常流行的Javascript框架，如果你想要从事Web前端开发这个岗位，那么jQuery是你必须掌握而且能够熟练应用的一门技术。本文整理了一些关于jQuery的经典面试题及答案，分享给正要面试Web开发岗位的同学。</p>
+<p>##jQuery的美元符号$有什么作用？</p>
+<blockquote>
+<p>其实美元符号$只是”jQuery”的别名，它是jQuery的选择器，如下代码：</p>
+</blockquote>
+<pre><code>$(document).ready(function(){
+
+});
+</code></pre><blockquote>
+<p>当然你也可以用jQuery来代替$，如下代码：</p>
+</blockquote>
+<pre><code>jQuery(document).ready(function(){
+
+});
+</code></pre><p>jQuery中就是通过这个美元符号来实现各种灵活的DOM元素选择的，例如$(“#main”)即选中id为main的元素.</p>
+<p>##body中的onload()函数和jQuery中的document.ready()有什么区别？</p>
+<blockquote>
+<p>onload()和document.ready()的区别有以下两点：</p>
+</blockquote>
+<p>1、我们可以在页面中使用多个document.ready()，但只能使用一次onload()。</p>
+<p>2、document.ready()函数在页面DOM元素加载完以后就会被调用，而onload()函数则要在所有的关联资源（包括图像、音频）加载完毕后才会调用。</p>
+<p>##jQuery中有哪几种类型的选择器？</p>
+<blockquote>
+<p>从我自己的角度来讲，可以有3种类型的选择器，如下：</p>
+</blockquote>
+<p>1、基本选择器：直接根据id、css类名、元素名返回匹配的dom元素。</p>
+<p>2、层次选择器：也叫做路径选择器，可以根据路径层次来选择相应的DOM元素。</p>
+<p>3、过滤选择器：在前面的基础上过滤相关条件，得到匹配的dom元素。</p>
+<p>##请使用jQuery将页面上的所有元素边框设置为2px宽的虚线？</p>
+<blockquote>
+<p>这正是jQuery选择器上场的时候了，代码如下：</p>
+</blockquote>
+<pre><code>&lt;script language=&quot;javascript&quot; type=&quot;text/javascript&quot;&gt;
+
+         $(&quot;*&quot;).css(&quot;border&quot;, &quot;2px dotted red&quot;); 
+
+&lt;/script&gt;
+</code></pre><p>##当CDN上的jQuery文件不可用时，该怎么办？</p>
+<blockquote>
+<p>为了节省带宽和脚本引用的稳定性，我们会使用CDN上的jQuery文件，例如google的jquery cdn服务。但是如果这些CDN上的jQuery服务不可用，我们还可以通过以下代码来切换到本地服务器的jQuery版本：</p>
+</blockquote>
+<pre><code>&lt;script type=&quot;text/javascript&quot; language=&quot;Javascript&quot; src=&quot;http://ajax.aspnetcdn.com/ajax/jquery/jquery-1.4.1.min.js &quot;&gt;&lt;/script&gt;
+
+&lt;script type=&apos;text/javascript&apos;&gt;//&lt;![CDATA[
+
+if (typeof jQuery == &apos;undefined&apos;) {
+
+document.write(unescape(&quot;%3Cscript src=&apos;/Script/jquery-1.4.1.min.js&apos; type=&apos;text/javascript&apos; %3E%3C/script%3E&quot;));
+
+}//]]&gt;
+
+&lt;/script&gt;
+</code></pre><p>##如何使用jQuery实现点击按钮弹出一个对话框？<br>HTML：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;input id=&quot;inputField&quot; type=&quot;text&quot; size=&quot;12&quot;/&gt;</div></pre></td></tr></table></figure>
+<p>jQuery：</p>
+<pre><code>&lt;script type=&quot;text/javascript&quot;&gt; 
+    $(document).ready(function () { 
+        $(&apos;#Button1&apos;).click(function () { 
+            alert($(&apos;#inputField&apos;).attr(&quot;value&quot;)); 
+        }); 
+    }); 
+&lt;/script&gt;
+</code></pre><p>##jQuery中的Delegate()函数有什么作用？</p>
+<blockquote>
+<p>delegate()会在以下两个情况下使用到：</p>
+</blockquote>
+<p>1、如果你有一个父元素，需要给其下的子元素添加事件，这时你可以使用delegate()了，代码如下：</p>
+<pre><code>$(&quot;ul&quot;).delegate(&quot;li&quot;, &quot;click&quot;, function(){
+
+$(this).hide();
+
+});
+</code></pre><p>2、当元素在当前页面中不可用时，可以使用delegate()</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2013/12/28/hello-world/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+  
+    <article id="post-css垂直水平居中" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2013/12/21/css垂直水平居中/">CSS垂直水平居中的问题</a>
+    </h1>
+  
+
+        
+        <a href="/2013/12/21/css垂直水平居中/" class="archive-article-date">
+  	<time datetime="2013-12-21T14:10:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2013-12-21</time>
 </a>
         
       </header>
@@ -264,7 +376,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2013/09/21/hello-world/">展开全文 >></a>
+          <a class="article-more-a" href="/2013/12/21/css垂直水平居中/">展开全文 >></a>
         </p>
       
 
@@ -410,7 +522,7 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
     
     	<section class="tools-section tools-section-me" q-show="aboutme">
   	  	
-  	  		<div class="aboutme-wrap" id="js-aboutme">很惭愧&lt;br&gt;&lt;br&gt;只做了一点微小的工作&lt;br&gt;谢谢大家</div>
+  	  		<div class="aboutme-wrap" id="js-aboutme">快乐生活&lt;br&gt;&lt;br&gt;认真撸代码&lt;br&gt;谢谢大家</div>
   	  	
     	</section>
     
