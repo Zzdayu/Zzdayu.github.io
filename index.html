@@ -214,7 +214,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2014/01/01/hello-world/">Hello World</a>
+      <a class="article-title" href="/2014/01/01/hello-world/">CSS垂直水平居中的问题</a>
     </h1>
   
 
@@ -227,16 +227,36 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
+        <p>总做中可能会遇到各种需要垂直水平居中的问题，这里总结下我常见的几中。</p>
+<h2 id="第一：利用定位position："><a href="#第一：利用定位position：" class="headerlink" title="第一：利用定位position："></a>第一：利用定位position：</h2><h3 id="1在元素宽高已知的情况下，配合负margin达到水平居中"><a href="#1在元素宽高已知的情况下，配合负margin达到水平居中" class="headerlink" title="1在元素宽高已知的情况下，配合负margin达到水平居中"></a>1在元素宽高已知的情况下，配合负margin达到水平居中</h3><pre><code>  .parent
+{
+        position:relative
+}
+.child
+{
+    position:absolute;
+    top:50 %;
+    left:50 %;
+    width:50px;
+    height:50px:
+    margin:-25px;
+    margin-top:-25px
+}
+</code></pre><h3 id="2宽高未知的情况下，利用CSS3的属性"><a href="#2宽高未知的情况下，利用CSS3的属性" class="headerlink" title="2宽高未知的情况下，利用CSS3的属性"></a>2宽高未知的情况下，利用CSS3的属性</h3><pre><code>.parent{position:relative}
+.child{position:absolute;
+    top:50%;
+    left:50%;
+        width:50px;height:50px:
+    transform：translate(-50%,-50%)
+}
+</code></pre><h3 id="3利用绝对定位元素的盒模型特性，在偏移属性为确定值的基础上，设置margin-auto"><a href="#3利用绝对定位元素的盒模型特性，在偏移属性为确定值的基础上，设置margin-auto" class="headerlink" title="3利用绝对定位元素的盒模型特性，在偏移属性为确定值的基础上，设置margin:auto"></a>3利用绝对定位元素的盒模型特性，在偏移属性为确定值的基础上，设置margin:auto</h3><pre><code>.parent{position:relative}
+.child{position:absolute;
+    top:0; bottom:0;
+    left:0;right:0;
+    margin:auto
+    width:50px;height:50px:
+}
+</code></pre>
       
 
       
