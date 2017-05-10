@@ -6,14 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2013/12 | Hexo</title>
+  <title>CSS垂直水平居中的问题 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/archives/2013/12/index.html">
+  <meta name="description" content="总做中可能会遇到各种需要垂直水平居中的问题，这里总结下我常见的几中。 第一：利用定位position：1在元素宽高已知的情况下，配合负margin达到水平居中  .parent {         position:relative } .child {     position:absolute;     top:50 %;     left:50 %;     width:50px;">
+<meta name="keywords" content="随笔">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CSS垂直水平居中的问题">
+<meta property="og:url" content="http://yoursite.com/2014/05/21/css垂直水平居中/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="总做中可能会遇到各种需要垂直水平居中的问题，这里总结下我常见的几中。 第一：利用定位position：1在元素宽高已知的情况下，配合负margin达到水平居中  .parent {         position:relative } .child {     position:absolute;     top:50 %;     left:50 %;     width:50px;">
+<meta property="og:updated_time" content="2017-05-10T05:55:50.103Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="CSS垂直水平居中的问题">
+<meta name="twitter:description" content="总做中可能会遇到各种需要垂直水平居中的问题，这里总结下我常见的几中。 第一：利用定位position：1在元素宽高已知的情况下，配合负margin达到水平居中  .parent {         position:relative } .child {     position:absolute;     top:50 %;     left:50 %;     width:50px;">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -141,49 +146,207 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-css垂直水平居中" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2013" class="archive-year">2013</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2013/12/20/hello-world - 副本/" class="archive-article-date">
-  	<time datetime="2013-12-20T03:10:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2013-12-20</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2013/12/20/hello-world - 副本/">Hello World</a>
+    <h1 class="article-title" itemprop="name">
+      CSS垂直水平居中的问题
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
+        
+        <a href="/2014/05/21/css垂直水平居中/" class="archive-article-date">
+  	<time datetime="2014-05-21T14:10:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2014-05-21</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>总做中可能会遇到各种需要垂直水平居中的问题，这里总结下我常见的几中。</p>
+<h2 id="第一：利用定位position："><a href="#第一：利用定位position：" class="headerlink" title="第一：利用定位position："></a>第一：利用定位position：</h2><h3 id="1在元素宽高已知的情况下，配合负margin达到水平居中"><a href="#1在元素宽高已知的情况下，配合负margin达到水平居中" class="headerlink" title="1在元素宽高已知的情况下，配合负margin达到水平居中"></a>1在元素宽高已知的情况下，配合负margin达到水平居中</h3><pre><code>  .parent
+{
+        position:relative
+}
+.child
+{
+    position:absolute;
+    top:50 %;
+    left:50 %;
+    width:50px;
+    height:50px:
+    margin:-25px;
+    margin-top:-25px
+}
+</code></pre><h3 id="2宽高未知的情况下，利用CSS3的属性"><a href="#2宽高未知的情况下，利用CSS3的属性" class="headerlink" title="2宽高未知的情况下，利用CSS3的属性"></a>2宽高未知的情况下，利用CSS3的属性</h3><pre><code>.parent{position:relative}
+.child{position:absolute;
+    top:50%;
+    left:50%;
+        width:50px;height:50px:
+    transform：translate(-50%,-50%)
+}
+</code></pre><h3 id="3利用绝对定位元素的盒模型特性，在偏移属性为确定值的基础上，设置margin-auto"><a href="#3利用绝对定位元素的盒模型特性，在偏移属性为确定值的基础上，设置margin-auto" class="headerlink" title="3利用绝对定位元素的盒模型特性，在偏移属性为确定值的基础上，设置margin:auto"></a>3利用绝对定位元素的盒模型特性，在偏移属性为确定值的基础上，设置margin:auto</h3><pre><code>.parent{position:relative}
+.child{position:absolute;
+    top:0; bottom:0;
+    left:0;right:0;
+    margin:auto
+    width:50px;height:50px:
+}
+</code></pre>
+      
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢认可<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2014/05/21/css垂直水平居中/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2014/06/28/hello-world/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          初识jQuery
+        
+      </div>
+    </a>
   
   
-    </div></section>
+    <a href="/2013/12/20/hello-world - 副本/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Hello World</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
+  
+  
+  
+  <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+<script>
+  var cloudTieConfig = {
+    url: "http://yoursite.com/2014/05/21/css垂直水平居中/", 
+    sourceId: "css垂直水平居中",
+    productKey: "true",
+    target: "cloud-tie-wrapper"
+  };
+</script>
+<script src="https://img1.cache.netease.com/f2e/tie/yun/sdk/loader.js"></script>
   
 
-    
+  
+  <div id="SOHUCS" sid="css垂直水平居中" ></div> 
+<script type="text/javascript"> 
+(function(){ 
+var appid = "true"; 
+var conf = "true"; 
+var width = window.innerWidth || document.documentElement.clientWidth; 
+if (width < 960) { 
+window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="http://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("http://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); } })(); </script>
+  
+
+  
 
 
           </div>
@@ -206,8 +369,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

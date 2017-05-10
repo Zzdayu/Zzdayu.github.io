@@ -6,14 +6,18 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2013/12 | Hexo</title>
+  <title>初识jQuery | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/archives/2013/12/index.html">
+  <meta name="description" content="jQuery是一款非常流行的Javascript框架，如果你想要从事Web前端开发这个岗位，那么jQuery是你必须掌握而且能够熟练应用的一门技术。本文整理了一些关于jQuery的经典面试题及答案，分享给正要面试Web开发岗位的同学。 ##jQuery的美元符号$有什么作用？  其实美元符号$只是”jQuery”的别名，它是jQuery的选择器，如下代码：  $(document).ready(f">
+<meta property="og:type" content="article">
+<meta property="og:title" content="初识jQuery">
+<meta property="og:url" content="http://yoursite.com/2014/06/28/hello-world/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="jQuery是一款非常流行的Javascript框架，如果你想要从事Web前端开发这个岗位，那么jQuery是你必须掌握而且能够熟练应用的一门技术。本文整理了一些关于jQuery的经典面试题及答案，分享给正要面试Web开发岗位的同学。 ##jQuery的美元符号$有什么作用？  其实美元符号$只是”jQuery”的别名，它是jQuery的选择器，如下代码：  $(document).ready(f">
+<meta property="og:updated_time" content="2017-05-10T05:56:56.036Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="初识jQuery">
+<meta name="twitter:description" content="jQuery是一款非常流行的Javascript框架，如果你想要从事Web前端开发这个岗位，那么jQuery是你必须掌握而且能够熟练应用的一门技术。本文整理了一些关于jQuery的经典面试题及答案，分享给正要面试Web开发岗位的同学。 ##jQuery的美元符号$有什么作用？  其实美元符号$只是”jQuery”的别名，它是jQuery的选择器，如下代码：  $(document).ready(f">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -141,49 +145,231 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-hello-world" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2013" class="archive-year">2013</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2013/12/20/hello-world - 副本/" class="archive-article-date">
-  	<time datetime="2013-12-20T03:10:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2013-12-20</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2013/12/20/hello-world - 副本/">Hello World</a>
+    <h1 class="article-title" itemprop="name">
+      初识jQuery
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
+        
+        <a href="/2014/06/28/hello-world/" class="archive-article-date">
+  	<time datetime="2014-06-28T14:10:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2014-06-28</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>jQuery是一款非常流行的Javascript框架，如果你想要从事Web前端开发这个岗位，那么jQuery是你必须掌握而且能够熟练应用的一门技术。本文整理了一些关于jQuery的经典面试题及答案，分享给正要面试Web开发岗位的同学。</p>
+<p>##jQuery的美元符号$有什么作用？</p>
+<blockquote>
+<p>其实美元符号$只是”jQuery”的别名，它是jQuery的选择器，如下代码：</p>
+</blockquote>
+<pre><code>$(document).ready(function(){
 
+});
+</code></pre><blockquote>
+<p>当然你也可以用jQuery来代替$，如下代码：</p>
+</blockquote>
+<pre><code>jQuery(document).ready(function(){
+
+});
+</code></pre><p>jQuery中就是通过这个美元符号来实现各种灵活的DOM元素选择的，例如$(“#main”)即选中id为main的元素.</p>
+<p>##body中的onload()函数和jQuery中的document.ready()有什么区别？</p>
+<blockquote>
+<p>onload()和document.ready()的区别有以下两点：</p>
+</blockquote>
+<p>1、我们可以在页面中使用多个document.ready()，但只能使用一次onload()。</p>
+<p>2、document.ready()函数在页面DOM元素加载完以后就会被调用，而onload()函数则要在所有的关联资源（包括图像、音频）加载完毕后才会调用。</p>
+<p>##jQuery中有哪几种类型的选择器？</p>
+<blockquote>
+<p>从我自己的角度来讲，可以有3种类型的选择器，如下：</p>
+</blockquote>
+<p>1、基本选择器：直接根据id、css类名、元素名返回匹配的dom元素。</p>
+<p>2、层次选择器：也叫做路径选择器，可以根据路径层次来选择相应的DOM元素。</p>
+<p>3、过滤选择器：在前面的基础上过滤相关条件，得到匹配的dom元素。</p>
+<p>##请使用jQuery将页面上的所有元素边框设置为2px宽的虚线？</p>
+<blockquote>
+<p>这正是jQuery选择器上场的时候了，代码如下：</p>
+</blockquote>
+<pre><code>&lt;script language=&quot;javascript&quot; type=&quot;text/javascript&quot;&gt;
+
+         $(&quot;*&quot;).css(&quot;border&quot;, &quot;2px dotted red&quot;); 
+
+&lt;/script&gt;
+</code></pre><p>##当CDN上的jQuery文件不可用时，该怎么办？</p>
+<blockquote>
+<p>为了节省带宽和脚本引用的稳定性，我们会使用CDN上的jQuery文件，例如google的jquery cdn服务。但是如果这些CDN上的jQuery服务不可用，我们还可以通过以下代码来切换到本地服务器的jQuery版本：</p>
+</blockquote>
+<pre><code>&lt;script type=&quot;text/javascript&quot; language=&quot;Javascript&quot; src=&quot;http://ajax.aspnetcdn.com/ajax/jquery/jquery-1.4.1.min.js &quot;&gt;&lt;/script&gt;
+
+&lt;script type=&apos;text/javascript&apos;&gt;//&lt;![CDATA[
+
+if (typeof jQuery == &apos;undefined&apos;) {
+
+document.write(unescape(&quot;%3Cscript src=&apos;/Script/jquery-1.4.1.min.js&apos; type=&apos;text/javascript&apos; %3E%3C/script%3E&quot;));
+
+}//]]&gt;
+
+&lt;/script&gt;
+</code></pre><p>##如何使用jQuery实现点击按钮弹出一个对话框？<br>HTML：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;input id=&quot;inputField&quot; type=&quot;text&quot; size=&quot;12&quot;/&gt;</div></pre></td></tr></table></figure>
+<p>jQuery：</p>
+<pre><code>&lt;script type=&quot;text/javascript&quot;&gt; 
+    $(document).ready(function () { 
+        $(&apos;#Button1&apos;).click(function () { 
+            alert($(&apos;#inputField&apos;).attr(&quot;value&quot;)); 
+        }); 
+    }); 
+&lt;/script&gt;
+</code></pre><p>##jQuery中的Delegate()函数有什么作用？</p>
+<blockquote>
+<p>delegate()会在以下两个情况下使用到：</p>
+</blockquote>
+<p>1、如果你有一个父元素，需要给其下的子元素添加事件，这时你可以使用delegate()了，代码如下：</p>
+<pre><code>$(&quot;ul&quot;).delegate(&quot;li&quot;, &quot;click&quot;, function(){
+
+$(this).hide();
+
+});
+</code></pre><p>2、当元素在当前页面中不可用时，可以使用delegate()</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢认可<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2014/06/28/hello-world/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2014/05/21/css垂直水平居中/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">CSS垂直水平居中的问题</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
+  
+  
+  
+  <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+<script>
+  var cloudTieConfig = {
+    url: "http://yoursite.com/2014/06/28/hello-world/", 
+    sourceId: "hello-world",
+    productKey: "true",
+    target: "cloud-tie-wrapper"
+  };
+</script>
+<script src="https://img1.cache.netease.com/f2e/tie/yun/sdk/loader.js"></script>
   
 
-    
+  
+  <div id="SOHUCS" sid="hello-world" ></div> 
+<script type="text/javascript"> 
+(function(){ 
+var appid = "true"; 
+var conf = "true"; 
+var width = window.innerWidth || document.documentElement.clientWidth; 
+if (width < 960) { 
+window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="http://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("http://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); } })(); </script>
+  
+
+  
 
 
           </div>
@@ -206,8 +392,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
