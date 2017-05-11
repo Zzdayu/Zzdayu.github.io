@@ -6,18 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Hello World | Hexo</title>
+  <title>浅谈JavaScript之applay()方法和call()方法 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.">
+  <meta name="description" content="每个函数都包含两个非继承而来的方法：applay()和call()。这两个方法的用途都是在特定的作用域中调用函数，实际上等于设置函数体内this对象的值。首先apply()方法接受两个参数：一个是在其中运行函数的作用域，另一个是参数数组。其中，第二个参数可以是Array的实例，也可以是arguments对象。例如：">
+<meta name="keywords" content="随笔">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://yoursite.com/2014/05/20/hello-world - 副本/index.html">
+<meta property="og:title" content="浅谈JavaScript之applay()方法和call()方法">
+<meta property="og:url" content="http://yoursite.com/2014/07/18/call_apply/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.">
-<meta property="og:updated_time" content="2017-05-10T09:37:24.887Z">
+<meta property="og:description" content="每个函数都包含两个非继承而来的方法：applay()和call()。这两个方法的用途都是在特定的作用域中调用函数，实际上等于设置函数体内this对象的值。首先apply()方法接受两个参数：一个是在其中运行函数的作用域，另一个是参数数组。其中，第二个参数可以是Array的实例，也可以是arguments对象。例如：">
+<meta property="og:updated_time" content="2017-05-11T06:16:46.970Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.">
+<meta name="twitter:title" content="浅谈JavaScript之applay()方法和call()方法">
+<meta name="twitter:description" content="每个函数都包含两个非继承而来的方法：applay()和call()。这两个方法的用途都是在特定的作用域中调用函数，实际上等于设置函数体内this对象的值。首先apply()方法接受两个参数：一个是在其中运行函数的作用域，另一个是参数数组。其中，第二个参数可以是Array的实例，也可以是arguments对象。例如：">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -145,36 +146,54 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-hello-world - 副本" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-call_apply" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Hello World
+      浅谈JavaScript之applay()方法和call()方法
     </h1>
   
 
         
-        <a href="/2014/05/20/hello-world - 副本/" class="archive-article-date">
-  	<time datetime="2014-05-20T03:10:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2014-05-20</time>
+        <a href="/2014/07/18/call_apply/" class="archive-article-date">
+  	<time datetime="2014-07-18T06:51:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2014-07-18</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.<br><a id="more"></a></p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
+        <p>每个函数都包含两个非继承而来的方法：applay()和call()。这两个方法的用途都是在特定的作用域中调用函数，实际上等于设置函数体内this对象的值。首先apply()方法接受两个参数：一个是在其中运行函数的作用域，另一个是参数数组。其中，第二个参数可以是Array的实例，也可以是arguments对象。例如：<br><a id="more"></a></p>
+<blockquote>
+<p>applay():</p>
+</blockquote>
+<pre><code>function sum(a, b){
+    return a+b;
+}
+function callSum1(a, b){
+    return sum.applay(this, arguments};//传入arguments对象
+}
+function callSum2(a, b){
+    return sum.applay(this, [a, b]);//传入数组
+}
+cc.warn(callSum1(10, 10);// 20;
+cc.warn(callSum2(10, 10);// 20;
+</code></pre><p>在上面的例子中，callSum1在执行sum函数时传入了this作为this值(因为是在全局作用域中调用的)和arguments对象。儿callSum2同样也调用了sum函数，但它传入的则是this和一个参数数组。这两个函数都会正常执行并还回正确的结果!</p>
+<blockquote>
+<p>call():</p>
+</blockquote>
+<p>call()方法与applay()方法的作用相同，他们的区别仅在于接受参数的方式不同。对于call()方法而言，第一个参数是this没有变化，变化的是其余参数都直接传递给函数。换句话说，在使用call()方法时，传递给函数的参数必须逐个列举出来，如下面的例子所示:</p>
+<pre><code>function sum(a, b){
+    return a + b;
+}
+function callSum(a, b){
+    return sum.call(this, a, b);
+}
+cc.warn(callSum(10, 10);// 20;
+</code></pre>
       
 
       
@@ -203,6 +222,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -253,7 +283,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2014/05/20/hello-world - 副本/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2014/07/18/call_apply/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -267,15 +297,11 @@
   
 <nav id="article-nav">
   
-    <a href="/2014/05/21/css垂直水平居中/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          CSS垂直水平居中的问题
-        
-      </div>
-    </a>
   
+    <a href="/2014/07/05/Ajax有关知识/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Ajax有关知识</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
 </nav>
 
@@ -289,8 +315,8 @@
   <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
 <script>
   var cloudTieConfig = {
-    url: "http://yoursite.com/2014/05/20/hello-world - 副本/", 
-    sourceId: "hello-world - 副本",
+    url: "http://yoursite.com/2014/07/18/call_apply/", 
+    sourceId: "call_apply",
     productKey: "true",
     target: "cloud-tie-wrapper"
   };
@@ -299,7 +325,7 @@
   
 
   
-  <div id="SOHUCS" sid="hello-world - 副本" ></div> 
+  <div id="SOHUCS" sid="call_apply" ></div> 
 <script type="text/javascript"> 
 (function(){ 
 var appid = "true"; 
