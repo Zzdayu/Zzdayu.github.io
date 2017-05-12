@@ -1,0 +1,867 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-CN">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="javaScript" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.1" />
+
+
+
+
+
+
+<meta name="description" content="#前端开发面试题集锦  前言:  面试题目： 根据你的等级和职位的变化，入门级到专家级，广度和深度都会有所增加。  题目类型： 理论知识、算法、项目细节、技术视野、开放性题、工作案例。  细节追问： 可以确保问到你开始不懂或面试官开始不懂为止，这样可以大大延展题目的区分度和深度，知道你的实际能力。因为这种知识关联是长时期的学习，临时抱佛脚绝对是记不住的。  回答问题再棒，面试官（可能是你面试职位的">
+<meta property="og:type" content="article">
+<meta property="og:title" content="前端开发面试题集锦">
+<meta property="og:url" content="http://yoursite.com/2015/08/21/前端面试收集/index.html">
+<meta property="og:site_name" content="Welcome">
+<meta property="og:description" content="#前端开发面试题集锦  前言:  面试题目： 根据你的等级和职位的变化，入门级到专家级，广度和深度都会有所增加。  题目类型： 理论知识、算法、项目细节、技术视野、开放性题、工作案例。  细节追问： 可以确保问到你开始不懂或面试官开始不懂为止，这样可以大大延展题目的区分度和深度，知道你的实际能力。因为这种知识关联是长时期的学习，临时抱佛脚绝对是记不住的。  回答问题再棒，面试官（可能是你面试职位的">
+<meta property="og:updated_time" content="2017-05-12T12:11:45.964Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="前端开发面试题集锦">
+<meta name="twitter:description" content="#前端开发面试题集锦  前言:  面试题目： 根据你的等级和职位的变化，入门级到专家级，广度和深度都会有所增加。  题目类型： 理论知识、算法、项目细节、技术视野、开放性题、工作案例。  细节追问： 可以确保问到你开始不懂或面试官开始不懂为止，这样可以大大延展题目的区分度和深度，知道你的实际能力。因为这种知识关联是长时期的学习，临时抱佛脚绝对是记不住的。  回答问题再棒，面试官（可能是你面试职位的">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2015/08/21/前端面试收集/"/>
+
+
+
+
+
+  <title>前端开发面试题集锦 | Welcome</title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Welcome</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Startseite
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            Über
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archiv
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/随笔" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-sitemap">
+          <a href="/sitemap.xml" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br />
+            
+            Sitemap
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2015/08/21/前端面试收集/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Mr.Zhu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/me.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Welcome">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">前端开发面试题集锦</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Veröffentlicht am</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2015-08-21T22:10:33+08:00">
+                2015-08-21
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <font color="#deeppink" face="微软雅黑" size="6">#<strong>前端开发面试题集锦</strong></font>
+
+<p>前言:</p>
+<ol>
+<li><p>面试题目： 根据你的等级和职位的变化，入门级到专家级，广度和深度都会有所增加。</p>
+</li>
+<li><p>题目类型： 理论知识、算法、项目细节、技术视野、开放性题、工作案例。</p>
+</li>
+<li><p>细节追问： 可以确保问到你开始不懂或面试官开始不懂为止，这样可以大大延展题目的区分度和深度，知道你的实际能力。因为这种知识关联是长时期的学习，临时抱佛脚绝对是记不住的。</p>
+</li>
+<li><p>回答问题再棒，面试官（可能是你面试职位的直接领导），会考虑我要不要这个人做我的同事？所以态度很重要、除了能做事，还要会做人。（感觉更像是相亲( •̣̣̣̣̣̥́௰•̣̣̣̣̣̥̀ )）</p>
+</li>
+<li><p>资深的前端开发能把absolute和relative弄混，这样的人不要也罢，因为团队需要的是：你这个人具有可以依靠的才能（靠谱）。</p>
+</li>
+</ol>
+<p>####知识点:<br>    HTML&amp;CSS：<br>    对Web标准的理解、浏览器内核差异、兼容性、hack、CSS基本功：布局、盒子模型、选择器优先级、<br>    HTML5、CSS3、Flexbox</p>
+<pre><code>JavaScript：
+数据类型、运算、对象、Function、继承、闭包、作用域、原型链、事件、RegExp、JSON、Ajax、
+DOM、BOM、内存泄漏、跨域、异步装载、模板引擎、前端MVC、路由、模块化、Canvas、ECMAScript 6、Nodejs
+
+其他：
+移动端、响应式、自动化构建、HTTP、离线存储、WEB安全、优化、重构、团队协作、可维护、易用性、SEO、UED、架构、职业生涯、快速学习能力
+</code></pre><p>####作为一名前端工程师，无论工作年头长短都应该掌握的知识点：</p>
+<pre><code>1、DOM结构 —— 两个节点之间可能存在哪些关系以及如何在节点之间任意移动。
+
+2、DOM操作 —— 如何添加、移除、移动、复制、创建和查找节点等。
+
+3、事件 —— 如何使用事件，以及IE和标准DOM事件模型之间存在的差别。
+
+4、XMLHttpRequest —— 这是什么、怎样完整地执行一次GET请求、怎样检测错误。
+
+5、严格模式与混杂模式 —— 如何触发这两种模式，区分它们有何意义。
+
+6、盒模型 —— 外边距、内边距和边框之间的关系，及IE8以下版本的浏览器中的盒模型
+
+7、块级元素与行内元素 —— 怎么用CSS控制它们、以及如何合理的使用它们
+
+8、浮动元素 —— 怎么使用它们、它们有什么问题以及怎么解决这些问题。
+
+9、HTML与XHTML —— 二者有什么区别，你觉得应该使用哪一个并说出理由。
+
+10、JSON —— 作用、用途、设计结构。
+</code></pre><h2 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h2><ul>
+<li><strong>Doctype作用? 标准模式与兼容模式各有什么区别?</strong></li>
+<li></li>
+</ul>
+<blockquote>
+<p>(1). &lt;!DOCTYPE&gt;声明位于HTML文档中的第一行,处于<html>标签之前.告知浏览器的解析器用什么文档标准节气这个文档.DOCTYPE不存在或者格式不争取会导致文档以兼容模式呈现.</html></p>
+<p>(2). 标准模式排版和js运作模式都是以该浏览器支持的最高标准运行的.在兼容模式中,页面以宽松的向后兼容的方式显示,模拟老式浏览器的行为以防止站点无法工作.</p>
+</blockquote>
+<ul>
+<li><strong>HTML5为什么只需要写&lt;!DOCTYPE&gt;?</strong></li>
+<li><blockquote>
+<p>HTML5不基于<strong>SGMl</strong>,因此不需要对DTD进行引用,但是需要doctype在规范浏览器的行为(让浏览器按照他们应该的方式来运行)<br>而HTML4.01 基于SGML,所以需要DTD进行引用,才能告知浏览器所使用的文档类型.</p>
+</blockquote>
+</li>
+<li><strong>行内元素有哪些? 块级元素有哪些? 空(void)元素有哪些?</strong></li>
+<li><p>  首先:css规范规定,每个元素都有display属性,确定该元素的类型,每个元素都有默认的display值,如div的display默认值为’block’,<br>  则为块级元素; span默认display值为’inline’,是行内元素.</p>
+<p>  (1) 行内元素有: a b span img input select strong<br>  (2) 块级元素有: div p ul ol li dl dd h1…h6<br>  (3) 常见空元素: <br> <hr> <img> <input> <link> <meta></p>
+<p>   鲜为人知的是: <area> <base> <col> <commad> <keygen> <param> <source> <track> <wbr></commad></p>
+<p>  不同浏览器(版本).HTML4(5).CSS2等实际略有差异<br>  参考:<a href="http://stackoverflow.com/questions/6867254/browsers-default-css-for-html-elements" target="_blank" rel="external">http://stackoverflow.com/questions/6867254/browsers-default-css-for-html-elements</a></p>
+</li>
+<li><p><strong>页面导入样式时,使用link和@import有什么区别?</strong></p>
+</li>
+<li><blockquote>
+<p>(1) link属于XHTML标签,除了加载css外,还能定义Rss, 定义rel链接属性等作用; 而@import是CSS提供的,只能用于加载CSS.<br>(2) 页面被加载时,link会同时被加载,而@import引用的CSS会等到页面加载完在加载;<br>(3) import是CSS2.1提出的,值有在ie5以上才被识别,而link是XHTML标签,无兼容问题;</p>
+</blockquote>
+</li>
+<li><p><strong>介绍一下你对浏览器内核的理解</strong></p>
+</li>
+<li><p>  主要分为两部分:<strong>渲染引擎</strong>(layout engineer或Rendering Engine)和<strong>js引擎</strong>.<br>  渲染引擎:负责取得网页内容(HTML,XML,图像等等),整理讯息(例如加入CSS等),以及计算网页显示方式,然后输出至显示器或打印机.<br>  浏览器的内核不同对于网页的语法解释会有不同,所以渲染的效果也不相同. 所有网页浏览器,电子邮件客户端以及其他需要编辑、<br>  显示网络内容的应用程序都需要内核。<br>  js引擎：解析和执行JavaScript来实现网页的动态效果。<br>  最开始渲染引擎和js引擎并没有区分的很明确，后来js引擎越来越独立，内核就倾向于只指渲染引擎。</p>
+</li>
+<li><p><strong>常见的浏览器内核有哪些？</strong></p>
+</li>
+<li><ul>
+<li>Trident内核： IE（又称MSHTML）</li>
+<li>Gecko内核： Firefox浏览器</li>
+<li>Webkit内核：Safari、Chrome浏览器等</li>
+<li><p>Presto内核：Opera浏览器（opera内核原为：Presto，现为：Blink）</p>
+<p>详细文章：<a href="http://www.cnblogs.com/fullhouse/archive/2011/12/19/2293455.html" target="_blank" rel="external">浏览器内核的解析和对比</a></p>
+</li>
+</ul>
+</li>
+<li><p><strong>html5有哪些新特性、移除了哪些元素？如何吹html5新标签浏览器兼容问题？如何区分HTML和HTML5？</strong></p>
+</li>
+<li><p>  *HTML5现在已经不是SGML的子集，主要是关于图像，位置，存储，多任务等功能的增加。<br>  绘画： canvas；<br>  用于媒介回放的：video和audio元素；<br>  本地离线存储：localStorage 长期存储数据，浏览器关闭数据不会丢失；<br>  sessionStorage的数据在浏览器关闭后自动删除；<br>  语义化更好的元素内容， 比如 article、footer、header、nav、section；<br>  表单控件：calender、date、time、email、url、search；<br>  新的技术：webworker，websocket，Geolocation；</p>
+<p>  <strong>移除的元素</strong>：<br>  纯表现的元素： basefont，big，center，font，s，strike，tt，u；<br>  对可用性产生负面影响的元素：frame，frameset，noframes；</p>
+<p>  *支持HTML5新标签：<br>  IE8/IE7/IE6/支持通过document.createElement方法产生的标签，<br>  可以利用这一特性让这些浏览器支持HTML5新标签，<br>  浏览器支持新标签后，还需要添加默认的样式。</p>
+<p>  当然也可以直接使用成熟的框架： 比如html5shim；</p>
+   <!--[if lt IE 9]>
+     <script> src="http://html5shim.googlecode.com/svn/trunk/html5.js"</script>
+   <![endif]-->
+</li>
+<li><p><strong>简述一下你对HTML5语义化的理解</strong></p>
+</li>
+<li><p>  用正确的标签做正确的事。<br>  html语义化让页面的内容结构化，结构更清晰，便于浏览器、搜索引擎的解析；<br>  即使在没有CSS样式的情况下也以一种文档格式显示，并且是容易阅读的。<br>  搜索引擎的爬虫也依赖于HTML标记来确定上下文和各个关键字的权重，利于SEO；<br>  使阅读代码的人对网站更容易将网站分块，便于阅读维护理解。</p>
+</li>
+<li><p><strong>HTML5的离线存储怎么使用，工作原理</strong><br>-<br>  在用户没有与因特网连接时，可以正常访问站点或应用，在用户与因特网连接时，更新用户机器上的缓存文件。<br>  原理： HTML5的离线存储是基于一个新建的.appcahce文件的缓存机制(不是存储技术), 通过这个文件上的解析清单离线存储资源,<br>  这些资源就会像cookie一样被存储下来。之后当网络处于离线状态下时，浏览器会通过被离线存储的数据进行页面展示。</p>
+<p>  如何使用：<br>  1、 页面头部下面一样加入一个manifest的属性；<br>  2 、在cache.manifest文件的编写离线存储的资源;</p>
+<pre><code>CACHE MANIFEST
+#v0.11
+CACHE:
+js/app.js
+css/style.css
+NETWORK:
+resourse/logo.png
+FALLBACK:
+/ /offline.html
+</code></pre><p>  3、 在离线状态时，操作系统window.applicationCache进行需求实现。</p>
+<p>  详细的使用请参考：</p>
+<p>  <a href="http://yanhaijing.com/html/2014/12/28/html5-manifest/" target="_blank" rel="external">HTML5 离线缓存-manifest简介</a></p>
+<p>  <a href="http://segmentfault.com/a/1190000000732617" target="_blank" rel="external">有趣的HTML5：离线存储</a></p>
+</li>
+</ul>
+<p>3/17/2017 2:11:36 PM</p>
+<ul>
+<li>**浏览器是怎么对HTML5的离线存储资源进行管理和加载的呢？</li>
+<li><p>  在线的情况下，浏览器会发现html头部有manifest属性，他会请求manifest文件，如果是第一次访问app，<br>  那么浏览器会根据manifest文件的内容下载相应的资源并且进行离线存储。如果已经访问过app<br>  并且资源已经离线存储了，那么浏览器会使用离线资源加载页面，然后浏览器会对比新的manifest<br>  文件与旧的manifest文件，如文件没有发生改变，就不做任何操作，如果文件改变了，那么就会<br>  重现下载文件中的资源，并进行离线存储。<br>  离线的情况下，浏览器就直接使用离线存储的资源。</p>
+<p>  详细请参考：有趣的HTML5：离线存储</p>
+</li>
+<li><p><strong>请描述一下 coolies,sessionStrorage和IocalStroge的区别?</strong></p>
+</li>
+<li><p>  cookie是网站为了标识用户身份而存储在用户本地终端(Client Side)上的数据(通常经过加密).<br>  cookie数据书中在同源的http请求中携带(即使不需要),也会在服务器和浏览器间来回传递。<br>  sessionStroage和localStroage不会自动把数据发给服务器，仅在本地保存。</p>
+<p>  存储大小：<br>  cookie数据大小不能超过4k<br>  sessionStorage和localStorage 虽然也有存储大小的限制，但比cookie大的多，可以达到5M或更大。</p>
+<p>  有期时间：<br>  localStorage    存储持久数据，浏览器关闭后数据不回丢失，除非主动删除数据。<br>  sessionStorage  数据在当前浏览器窗口关闭后自动删除。<br>  coolie            设置的cookie过期时间之前一直有效，即使窗口或浏览器关闭。</p>
+</li>
+<li><p><strong>iframe有哪些缺点？</strong></p>
+</li>
+<li><em>iframe会阻塞主页面的Onload时间；
+</em>搜索引擎的检索程序无法解读这种页面， 不利于SEO；<br>*iframe和主页面共享链接池，而浏览器对相同域的链接有限制，所以会影响页面的并行加载。</li>
+</ul>
+<p>使用iframe之前要考虑这几点缺点， 还如果需要使用iframe， 最好是通过JavaScript<br>动态给iframe添加src属性，这样可以绕开上述问题。</p>
+<ul>
+<li><p><strong>Label的作用是什么？ 是怎么用的？</strong><br>-<br>  label标签来定义表单控制间的关系，当用户选择该标签时，浏览器会自动将焦点转到和标签相关的表单控件上。</p>
+  <label for="Name"> Number: </label><br>  <input type="text" name="name" id="Name"><br>  <label>Date:<input type="text" name="B"></label>
+</li>
+<li><p>**HTMl5的form如何关闭自动完成功能?<br>-</p>
+<blockquote>
+<p>给不想要提示的form或某个input设置为autocomplete = off;</p>
+</blockquote>
+</li>
+<li><p><strong>如何实现浏览器内过个页面之间的通信?(阿里)</strong></p>
+</li>
+<li><blockquote>
+<p>WebSocket、SharedWorker；<br>也可以调用localstorge、cookies等本地存储方式；<br>localstorge另一个浏览上下文里被添加、修改或删除时，它都会触发一个时间，<br>我们通过监听时间，控制它的值来进行页面信息通信；<br>注意： quirks： Safari 在无痕模式下设置localstorge值时会抛出QuotaExceedeError的异常；</p>
+</blockquote>
+</li>
+<li><p><strong>陀可见性（Page Visibility API）可以有哪些用途？</strong></p>
+</li>
+<li><blockquote>
+<p>通过visibilityState的检测陀当前是否可见, 以及打开网页的时间等;<br>在页面被切换到其他后台进程的时候,自动暂停音乐或视频播放;</p>
+</blockquote>
+</li>
+<li><p><strong>如何在页面实现一个圆形的可点击区域?</strong><br>-<br>  1.map+area或者svg<br>  2.border-radius<br>  3.纯js实现 需要求一个点不在园上简单算法.获取鼠标坐标等等;</p>
+</li>
+<li><p><strong>实现不适用border 画出1px高的先, 在不同浏览器的标准模式与冠以模式下都能保持一致</strong><br>-</p>
+  <div style="height:1px; overflow:hidden;background:red"></div>
+</li>
+<li><p><strong>网页验证是干嘛用的,是为了解决什么安全问题?</strong><br>-<br>  区分用户是计算机还是人的公共全自动程序. 可防止恶意皮杰密码、刷票、论坛灌水；<br>  有效防止黑客对某一个特定注册用户特定程序暴力破解方式进行不断的登录尝试。</p>
+</li>
+<li><p><strong>title与h1的区别、 b与strong的区别、i与em的区别？</strong><br>-<br>  title属性没有明确意义,只表示是个标题, h1则表示层次明确的标题,对页面信息的抓取有很大的影响;<br>  strong是表明重点内容,有语气加强的含义,使用阅读设备阅读网络时:<strong>会重读,而<b>是展示强调内容;<br>  <i>内容展示为斜体,<em>表示强调的文本;</em></i></b></strong></p>
+</li>
+</ul>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2014/07/18/call_apply/" rel="next" title="浅谈JavaScript之applay()方法和call()方法">
+                <i class="fa fa-chevron-left"></i> 浅谈JavaScript之applay()方法和call()方法
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/07/12/C3动画/" rel="prev" title="C3动画">
+                C3动画 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Inhaltsverzeichnis
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Übersicht
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/me.jpg"
+               alt="Mr.Zhu" />
+          <p class="site-author-name" itemprop="name">Mr.Zhu</p>
+           
+              <p class="site-description motion-element" itemprop="description">Will is power</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">10</span>
+                <span class="site-state-item-name">Artikel</span>
+              </a>
+            </div>
+          
+
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">Tags</span>
+              
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#HTML"><span class="nav-number">1.</span> <span class="nav-text">HTML</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2014 - 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Mr.Zhu</span>
+</div>
+
+
+<div class="powered-by">
+  Erstellt mit  <a class="theme-link" href="https://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+  
+  <script type="text/javascript" src="/lib/three/three.min.js"></script>
+
+  
+  <script type="text/javascript" src="/lib/three/three-waves.min.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

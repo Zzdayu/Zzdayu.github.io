@@ -1,0 +1,927 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-CN">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="javaScript" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.1" />
+
+
+
+
+
+
+<meta name="description" content="#js基础   布尔类型转化数值类型  var a = true; var b = false; console.log(Number(a));//NaN console.log( Number(b));//NaN 如果布尔类型转为数值类型, true为1, false为0;  任意的javascript的值都可以转换成布尔值。下面这些值会被转换成false:undefined,null,0,-0">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Welcome">
+<meta property="og:url" content="http://yoursite.com/2017/05/12/js知识总结/index.html">
+<meta property="og:site_name" content="Welcome">
+<meta property="og:description" content="#js基础   布尔类型转化数值类型  var a = true; var b = false; console.log(Number(a));//NaN console.log( Number(b));//NaN 如果布尔类型转为数值类型, true为1, false为0;  任意的javascript的值都可以转换成布尔值。下面这些值会被转换成false:undefined,null,0,-0">
+<meta property="og:updated_time" content="2017-03-27T07:18:17.617Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Welcome">
+<meta name="twitter:description" content="#js基础   布尔类型转化数值类型  var a = true; var b = false; console.log(Number(a));//NaN console.log( Number(b));//NaN 如果布尔类型转为数值类型, true为1, false为0;  任意的javascript的值都可以转换成布尔值。下面这些值会被转换成false:undefined,null,0,-0">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2017/05/12/js知识总结/"/>
+
+
+
+
+
+  <title> | Welcome</title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Welcome</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Startseite
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            Über
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archiv
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/随笔" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-sitemap">
+          <a href="/sitemap.xml" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br />
+            
+            Sitemap
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/12/js知识总结/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Mr.Zhu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/me.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Welcome">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline"></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Veröffentlicht am</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-05-12T20:07:03+08:00">
+                2017-05-12
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>#js基础</p>
+<hr>
+<blockquote>
+<p><strong>布尔类型转化数值类型</strong></p>
+</blockquote>
+<pre><code>var a = true;
+var b = false;
+console.log(Number(a));//NaN
+console.log( Number(b));//NaN
+</code></pre><p>如果布尔类型转为数值类型, true为1, false为0;</p>
+<blockquote>
+<p><strong>任意的javascript的值都可以转换成布尔值。下面这些值会被转换成false:</strong><br>undefined,null,0,-0,NaN,”” //空字符串;</p>
+</blockquote>
+<p>需要注意的是’0’这个仅仅包含0的字符串会转成true！</p>
+<blockquote>
+<p><strong>补充</strong></p>
+</blockquote>
+<pre><code>null == undefined //true 
+null === undefined //false
+</code></pre><hr>
+<blockquote>
+<p><strong>数值参与逻辑运算</strong></p>
+</blockquote>
+<p> 数值参与<strong>&amp;&amp;</strong>,如果结果为真,返回第二个为真的值,如果结果为假,返回第一个为假的值;</p>
+<pre><code>var a = 2;
+var b = 3;
+console.log(a &amp;&amp; b)//3
+console.log(0 &amp;&amp; a)//0
+</code></pre><p>数值参与||，如果结果为真，返回第一个为真的值，如果为假返回第二个为假的值</p>
+<p>如果有变量参与&amp;&amp;运算符，会把两个表达式都计算</p>
+<p>如果参与||,那么第一个为真值，第二个表达式不会计算，如果第一个为假，会计算第二个的值</p>
+<hr>
+<blockquote>
+<p><strong>常用的数学公式</strong></p>
+<pre><code> //1.最大值
+var a = Math.max(1,2,4,70);
+console.log(a);
+//2.最小值
+var b = Math.min(1,2,4,70);
+console.log(b);
+//3.计算几的几次方
+var c = Math.pow(2,5);
+console.log(c);
+//4.计算一个数的正的平方根
+var d = Math.sqrt(25);
+console.log(d);
+</code></pre></blockquote>
+<hr>
+<blockquote>
+<p><strong>switch语句</strong></p>
+</blockquote>
+<p>  switch(变量或者字符表达式){case 条件一：执行的代码 break; </p>
+<pre><code>var  weekDay = 0;
+switch (weekDay){
+    case 0:
+        alert(&apos;星期日&apos;);
+        break;
+    case 1:
+        alert(&apos;星期一&apos;);
+        break;
+    case 2:
+        alert(&apos;星期二&apos;);
+        break;
+    case 3:
+        alert(&apos;星期三&apos;);
+        break;
+    case 4:
+        alert(&apos;星期四&apos;);
+        break;
+    case 5:
+        alert(&apos;星期五&apos;);
+        break;
+    case 6:
+        alert(&apos;星期六&apos;);
+        break;
+    }
+</code></pre><p>注意每个case后，一定要加：break；default，就相当于else</p>
+<hr>
+<blockquote>
+<p><strong>数组的常用的方法</strong><br><a href="http://http://www.w3school.com.cn/jsref/jsref_obj_array.asp" title="参考链接" target="_blank" rel="external">http://www.w3school.com.cn/jsref/jsref_obj_array.asp</a></p>
+<p>返回值 <strong> arr.push() | arr.unshift()</strong></p>
+</blockquote>
+<pre><code>//1.创建数组
+var numArray = new Array();
+
+//2.添加元素
+var a = numArray.push(1);
+var b =  numArray.push(2);
+
+console.log(numArray);
+console.log(a);//1
+console.log(b);//2
+
+//push会在数组的结尾处添加一个元素，改变原来的数组,返回值是数组的长度
+
+//2.1第二种添加元素
+var aa = numArray.unshift(0);
+console.log(numArray);
+console.log(aa);
+
+//unshift：会在数组的开始添加一个元素，会改变数组，返回值是数组的长度
+</code></pre><blockquote>
+<p>数组删除方法 <strong>arr.pop | arr.shift：</strong></p>
+</blockquote>
+<pre><code>var numArray = [1, 2, 3];
+
+//1.删除元素
+var a = numArray.pop();
+console.log(a);    //返回被删除的元素3
+console.log(numArray);    //[1,2]
+//从数组的最后删除元素，返回删除的元素
+
+//从开头删除元素
+var aa = numArray.shift();
+console.log(aa);    //1
+console.log(numArray);    //[2]
+//shift会改变数组，返回被删除的元素
+</code></pre><blockquote>
+<p>链接数组： <strong>arr1.concat(arr2)</strong></p>
+</blockquote>
+<pre><code>/*链接数组方法 concat*/
+var array1 = [1,2,3];
+var array2 = [5,6,7];
+
+var allArray = array1.concat(array2);
+
+console.log(allArray);//[1, 2, 3, 5, 6, 7]
+console.log(array1);//[1, 2, 3]
+console.log(array2);//[5, 6, 7]
+</code></pre><blockquote>
+<p>数组转化: <strong>arr.join() | arr.split()</strong></p>
+</blockquote>
+<pre><code>var array = [1, 3, 5];
+
+//数组转化字符
+var arrStr = array.join(&apos;-&apos;);
+console.log(arrStr);//1-3-5
+//如果join方法中传入什么就会把数组用什么连接起来
+
+//字符串转化数组
+var newArray = arrStr.split(&apos;-&apos;);
+console.log(newArray);//[&quot;1&quot;, &quot;3&quot;, &quot;5&quot;]
+//split会把字符转化成数组，但是这个字符必须是有规律的
+</code></pre><blockquote>
+<p>数组排序  <strong>arr.sort(fn)  | arr.reverse()</strong></p>
+</blockquote>
+<pre><code>使用方法:
+var numArray  = [1, 3, 5, 4];
+
+numArray.sort(function (a, b){
+    return a &gt; b ? 1 : -1;
+});
+
+console.log(numArray);//[1, 3, 4, 5]
+若 a 小于 b，在排序后的数组中 a 应该出现在 b 之前，则返回一个小于 0 的值。
+若 a 等于 b，则返回 0。
+若 a 大于 b，则返回一个大于 0 的值。
+</code></pre><p>颠倒数组</p>
+<pre><code>console.log(numArray.reverse());//[5, 4, 3, 1]
+//注释：该方法会改变原来的数组，而不会创建新的数组。
+</code></pre><blockquote>
+<p>获取某一个位置的字符 <strong>charAt()</strong></p>
+</blockquote>
+<pre><code>var charStr = &apos;my name is zz&apos;;
+console.log(charStr.length);//13
+//空格是占用位置
+//获取元素
+var sym =  charStr.charAt(1);
+console.log(sym);//y
+</code></pre><blockquote>
+<p>获取一个字符的位置 <strong> str.indexOf()</strong></p>
+</blockquote>
+<pre><code>var charString = &apos;my is&apos;;
+//获取某一个字符的位置
+var x = charString.indexOf(&apos;i&apos;);
+var y = charString.indexOf(&apos;n&apos;);
+console.log(x);//3
+console.log(y);//找不到返回 -1
+
+//indexOf:会获取传入的字符的位置，位置从左到右边，如果获取到第一个元素后，就会返回第一个获取元素的位置,如果没有对应的元素就会返回-1；
+
+var newPoint = charString.lastIndexOf(&apos;s&apos;);
+console.log(newPoint);//4
+//lastIndexOf：从后往前找对应的元素，如果找到就会把对应的位置返回，但是注意位置排序还是从左到右
+</code></pre><blockquote>
+<p>字符大小写转化</p>
+</blockquote>
+<pre><code>var lowString = &apos;abc cddfff&apos;;
+
+//转化成大写
+var newLowString = lowString.toUpperCase();
+console.log(newLowString);//ABC CDDFFF
+
+//大小写方法不会改变原来的字符，返回值是对应转化后的结果
+var newString2 = newLowString.toLowerCase();
+console.log(newString2);//abc cddfff
+</code></pre><blockquote>
+<p>eval();函数可计算某个字符串，并执行其中的的 JavaScript 代码</p>
+</blockquote>
+<p>语法</p>
+<pre><code>eval(string)
+提示：虽然 eval() 的功能非常强大，但在实际使用中用到它的情况并不多。
+</code></pre><hr>
+<p>001 constructor:指向该对象的构造函数</p>
+<p>002 hasOwnProperty:检测对象中是否存在某个实例属性</p>
+<p>003 isPrototypeOf:判断某个对象是否是指定对象的原型对象(会判断整条原型链)</p>
+<p>004 propertyIsEnumerable:判断该属性是否是可枚举 如果是可以枚举的,那么在使用for..in循环的时候可以打印出来</p>
+<p>005 toString 返回一个对当前对象的字符串描述信息,并非一定是该对象的字符串形式</p>
+<pre><code>① object类型的对象 返回的什么  [obejct Object]
+② 其他对象类型如函数 | 数组 ,返回对应的字符串形式
+③ Number类型 可以传递参数(进制) 不传递参数:默认是十进制
+</code></pre><p>006 toLocaleString 大部分情况下的等价于toString方法，特殊情况下会做本地化处理</p>
+<p>007 valueOf 返回对应的值</p>
+<pre><code>① 基本包装类型（String Number Boolean）,返回对应的基本类型的值
+② object类型的，返回this(该对象本身)
+③ date(日期类)，返回时间戳
+</code></pre><hr>
+<p>001 Object.apply</p>
+<pre><code>借用其它对象的函数
+</code></pre><p>002 Object.arguments</p>
+<pre><code>函数内部的一个隐藏参数，主要用来接收实参。
+</code></pre><p>003 Object.assign</p>
+<pre><code>拷贝对象的属性的
+</code></pre><p>004 Object.bind</p>
+<pre><code>绑定处理（call和apply很像）
+</code></pre><p>005 Object.call</p>
+<pre><code>借用其它对象的函数
+</code></pre><p>006 Object.caller</p>
+<pre><code>某个函数的调用函数，返回的是一个函数
+如果是在全局作用域中调用该方法，那么打印出来的是：null而不是window
+</code></pre><p>007 Object.constructor</p>
+<pre><code>构造器属性，指向该对象的构造函数
+</code></pre><p>008 Object.create</p>
+<pre><code>创建对象，并且设置原型对象
+</code></pre><p>009 Object.getOwnPropertyDescriptor</p>
+<pre><code>获得对象中某个实例属性的描述信息（是否可以配置，枚举，值，是否可以重写）
+具体的描述信息如下：
+    configurable:true  是否是可以配置的（能不能删除属性或者是修改这个配置本身）
+    enumerable:true    是否是可以枚举的（在for..in循环中是否能够遍历出来|keys()）
+    value:&quot;zhangsan&quot;   属性对应的值
+    writable:true      是否是可重写的
+</code></pre><p>new Function创建函数</p>
+<pre><code>一个参数都没有，那么创建的是一个空函数
+有一个参数，这个参数作为新创建出来的函数的函数体
+有多个参数，最后一个参数是新创建的函数的函数体，其它的参数是形参列表
+
+&lt;script&gt;
+
+    //sum a,b 计算结果
+    var func = new Function(&quot;a&quot;,&quot;b&quot;,&quot; console.log(a + b);&quot;);
+    func(1,20);  //21
+&lt;/script&gt;
+</code></pre>
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/05/12/http协议/" rel="next" title="">
+                <i class="fa fa-chevron-left"></i> 
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview sidebar-panel sidebar-panel-active">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/me.jpg"
+               alt="Mr.Zhu" />
+          <p class="site-author-name" itemprop="name">Mr.Zhu</p>
+           
+              <p class="site-description motion-element" itemprop="description">Will is power</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">10</span>
+                <span class="site-state-item-name">Artikel</span>
+              </a>
+            </div>
+          
+
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">Tags</span>
+              
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2014 - 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Mr.Zhu</span>
+</div>
+
+
+<div class="powered-by">
+  Erstellt mit  <a class="theme-link" href="https://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+  
+  <script type="text/javascript" src="/lib/three/three.min.js"></script>
+
+  
+  <script type="text/javascript" src="/lib/three/three-waves.min.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

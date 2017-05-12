@@ -273,6 +273,771 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/12/js知识总结/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Mr.Zhu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/me.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Welcome">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/05/12/js知识总结/" itemprop="url">Unbenannt</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Veröffentlicht am</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-05-12T20:07:03+08:00">
+                2017-05-12
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>#js基础</p>
+<hr>
+<blockquote>
+<p><strong>布尔类型转化数值类型</strong></p>
+</blockquote>
+<pre><code>var a = true;
+var b = false;
+console.log(Number(a));//NaN
+console.log( Number(b));//NaN
+</code></pre><p>如果布尔类型转为数值类型, true为1, false为0;</p>
+<blockquote>
+<p><strong>任意的javascript的值都可以转换成布尔值。下面这些值会被转换成false:</strong><br>undefined,null,0,-0,NaN,”” //空字符串;</p>
+</blockquote>
+<p>需要注意的是’0’这个仅仅包含0的字符串会转成true！</p>
+<blockquote>
+<p><strong>补充</strong></p>
+</blockquote>
+<pre><code>null == undefined //true 
+null === undefined //false
+</code></pre><hr>
+<blockquote>
+<p><strong>数值参与逻辑运算</strong></p>
+</blockquote>
+<p> 数值参与<strong>&amp;&amp;</strong>,如果结果为真,返回第二个为真的值,如果结果为假,返回第一个为假的值;</p>
+<pre><code>var a = 2;
+var b = 3;
+console.log(a &amp;&amp; b)//3
+console.log(0 &amp;&amp; a)//0
+</code></pre><p>数值参与||，如果结果为真，返回第一个为真的值，如果为假返回第二个为假的值</p>
+<p>如果有变量参与&amp;&amp;运算符，会把两个表达式都计算</p>
+<p>如果参与||,那么第一个为真值，第二个表达式不会计算，如果第一个为假，会计算第二个的值</p>
+<hr>
+<blockquote>
+<p><strong>常用的数学公式</strong></p>
+<pre><code> //1.最大值
+var a = Math.max(1,2,4,70);
+console.log(a);
+//2.最小值
+var b = Math.min(1,2,4,70);
+console.log(b);
+//3.计算几的几次方
+var c = Math.pow(2,5);
+console.log(c);
+//4.计算一个数的正的平方根
+var d = Math.sqrt(25);
+console.log(d);
+</code></pre></blockquote>
+<hr>
+<blockquote>
+<p><strong>switch语句</strong></p>
+</blockquote>
+<p>  switch(变量或者字符表达式){case 条件一：执行的代码 break; </p>
+<pre><code>var  weekDay = 0;
+switch (weekDay){
+    case 0:
+        alert(&apos;星期日&apos;);
+        break;
+    case 1:
+        alert(&apos;星期一&apos;);
+        break;
+    case 2:
+        alert(&apos;星期二&apos;);
+        break;
+    case 3:
+        alert(&apos;星期三&apos;);
+        break;
+    case 4:
+        alert(&apos;星期四&apos;);
+        break;
+    case 5:
+        alert(&apos;星期五&apos;);
+        break;
+    case 6:
+        alert(&apos;星期六&apos;);
+        break;
+    }
+</code></pre><p>注意每个case后，一定要加：break；default，就相当于else</p>
+<hr>
+<blockquote>
+<p><strong>数组的常用的方法</strong><br><a href="http://http://www.w3school.com.cn/jsref/jsref_obj_array.asp" title="参考链接" target="_blank" rel="external">http://www.w3school.com.cn/jsref/jsref_obj_array.asp</a></p>
+<p>返回值 <strong> arr.push() | arr.unshift()</strong></p>
+</blockquote>
+<pre><code>//1.创建数组
+var numArray = new Array();
+
+//2.添加元素
+var a = numArray.push(1);
+var b =  numArray.push(2);
+
+console.log(numArray);
+console.log(a);//1
+console.log(b);//2
+
+//push会在数组的结尾处添加一个元素，改变原来的数组,返回值是数组的长度
+
+//2.1第二种添加元素
+var aa = numArray.unshift(0);
+console.log(numArray);
+console.log(aa);
+
+//unshift：会在数组的开始添加一个元素，会改变数组，返回值是数组的长度
+</code></pre><blockquote>
+<p>数组删除方法 <strong>arr.pop | arr.shift：</strong></p>
+</blockquote>
+<pre><code>var numArray = [1, 2, 3];
+
+//1.删除元素
+var a = numArray.pop();
+console.log(a);    //返回被删除的元素3
+console.log(numArray);    //[1,2]
+//从数组的最后删除元素，返回删除的元素
+
+//从开头删除元素
+var aa = numArray.shift();
+console.log(aa);    //1
+console.log(numArray);    //[2]
+//shift会改变数组，返回被删除的元素
+</code></pre><blockquote>
+<p>链接数组： <strong>arr1.concat(arr2)</strong></p>
+</blockquote>
+<pre><code>/*链接数组方法 concat*/
+var array1 = [1,2,3];
+var array2 = [5,6,7];
+
+var allArray = array1.concat(array2);
+
+console.log(allArray);//[1, 2, 3, 5, 6, 7]
+console.log(array1);//[1, 2, 3]
+console.log(array2);//[5, 6, 7]
+</code></pre><blockquote>
+<p>数组转化: <strong>arr.join() | arr.split()</strong></p>
+</blockquote>
+<pre><code>var array = [1, 3, 5];
+
+//数组转化字符
+var arrStr = array.join(&apos;-&apos;);
+console.log(arrStr);//1-3-5
+//如果join方法中传入什么就会把数组用什么连接起来
+
+//字符串转化数组
+var newArray = arrStr.split(&apos;-&apos;);
+console.log(newArray);//[&quot;1&quot;, &quot;3&quot;, &quot;5&quot;]
+//split会把字符转化成数组，但是这个字符必须是有规律的
+</code></pre><blockquote>
+<p>数组排序  <strong>arr.sort(fn)  | arr.reverse()</strong></p>
+</blockquote>
+<pre><code>使用方法:
+var numArray  = [1, 3, 5, 4];
+
+numArray.sort(function (a, b){
+    return a &gt; b ? 1 : -1;
+});
+
+console.log(numArray);//[1, 3, 4, 5]
+若 a 小于 b，在排序后的数组中 a 应该出现在 b 之前，则返回一个小于 0 的值。
+若 a 等于 b，则返回 0。
+若 a 大于 b，则返回一个大于 0 的值。
+</code></pre><p>颠倒数组</p>
+<pre><code>console.log(numArray.reverse());//[5, 4, 3, 1]
+//注释：该方法会改变原来的数组，而不会创建新的数组。
+</code></pre><blockquote>
+<p>获取某一个位置的字符 <strong>charAt()</strong></p>
+</blockquote>
+<pre><code>var charStr = &apos;my name is zz&apos;;
+console.log(charStr.length);//13
+//空格是占用位置
+//获取元素
+var sym =  charStr.charAt(1);
+console.log(sym);//y
+</code></pre><blockquote>
+<p>获取一个字符的位置 <strong> str.indexOf()</strong></p>
+</blockquote>
+<pre><code>var charString = &apos;my is&apos;;
+//获取某一个字符的位置
+var x = charString.indexOf(&apos;i&apos;);
+var y = charString.indexOf(&apos;n&apos;);
+console.log(x);//3
+console.log(y);//找不到返回 -1
+
+//indexOf:会获取传入的字符的位置，位置从左到右边，如果获取到第一个元素后，就会返回第一个获取元素的位置,如果没有对应的元素就会返回-1；
+
+var newPoint = charString.lastIndexOf(&apos;s&apos;);
+console.log(newPoint);//4
+//lastIndexOf：从后往前找对应的元素，如果找到就会把对应的位置返回，但是注意位置排序还是从左到右
+</code></pre><blockquote>
+<p>字符大小写转化</p>
+</blockquote>
+<pre><code>var lowString = &apos;abc cddfff&apos;;
+
+//转化成大写
+var newLowString = lowString.toUpperCase();
+console.log(newLowString);//ABC CDDFFF
+
+//大小写方法不会改变原来的字符，返回值是对应转化后的结果
+var newString2 = newLowString.toLowerCase();
+console.log(newString2);//abc cddfff
+</code></pre><blockquote>
+<p>eval();函数可计算某个字符串，并执行其中的的 JavaScript 代码</p>
+</blockquote>
+<p>语法</p>
+<pre><code>eval(string)
+提示：虽然 eval() 的功能非常强大，但在实际使用中用到它的情况并不多。
+</code></pre><hr>
+<p>001 constructor:指向该对象的构造函数</p>
+<p>002 hasOwnProperty:检测对象中是否存在某个实例属性</p>
+<p>003 isPrototypeOf:判断某个对象是否是指定对象的原型对象(会判断整条原型链)</p>
+<p>004 propertyIsEnumerable:判断该属性是否是可枚举 如果是可以枚举的,那么在使用for..in循环的时候可以打印出来</p>
+<p>005 toString 返回一个对当前对象的字符串描述信息,并非一定是该对象的字符串形式</p>
+<pre><code>① object类型的对象 返回的什么  [obejct Object]
+② 其他对象类型如函数 | 数组 ,返回对应的字符串形式
+③ Number类型 可以传递参数(进制) 不传递参数:默认是十进制
+</code></pre><p>006 toLocaleString 大部分情况下的等价于toString方法，特殊情况下会做本地化处理</p>
+<p>007 valueOf 返回对应的值</p>
+<pre><code>① 基本包装类型（String Number Boolean）,返回对应的基本类型的值
+② object类型的，返回this(该对象本身)
+③ date(日期类)，返回时间戳
+</code></pre><hr>
+<p>001 Object.apply</p>
+<pre><code>借用其它对象的函数
+</code></pre><p>002 Object.arguments</p>
+<pre><code>函数内部的一个隐藏参数，主要用来接收实参。
+</code></pre><p>003 Object.assign</p>
+<pre><code>拷贝对象的属性的
+</code></pre><p>004 Object.bind</p>
+<pre><code>绑定处理（call和apply很像）
+</code></pre><p>005 Object.call</p>
+<pre><code>借用其它对象的函数
+</code></pre><p>006 Object.caller</p>
+<pre><code>某个函数的调用函数，返回的是一个函数
+如果是在全局作用域中调用该方法，那么打印出来的是：null而不是window
+</code></pre><p>007 Object.constructor</p>
+<pre><code>构造器属性，指向该对象的构造函数
+</code></pre><p>008 Object.create</p>
+<pre><code>创建对象，并且设置原型对象
+</code></pre><p>009 Object.getOwnPropertyDescriptor</p>
+<pre><code>获得对象中某个实例属性的描述信息（是否可以配置，枚举，值，是否可以重写）
+具体的描述信息如下：
+    configurable:true  是否是可以配置的（能不能删除属性或者是修改这个配置本身）
+    enumerable:true    是否是可以枚举的（在for..in循环中是否能够遍历出来|keys()）
+    value:&quot;zhangsan&quot;   属性对应的值
+    writable:true      是否是可重写的
+</code></pre><p>new Function创建函数</p>
+<pre><code>一个参数都没有，那么创建的是一个空函数
+有一个参数，这个参数作为新创建出来的函数的函数体
+有多个参数，最后一个参数是新创建的函数的函数体，其它的参数是形参列表
+
+&lt;script&gt;
+
+    //sum a,b 计算结果
+    var func = new Function(&quot;a&quot;,&quot;b&quot;,&quot; console.log(a + b);&quot;);
+    func(1,20);  //21
+&lt;/script&gt;
+</code></pre>
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/12/http协议/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Mr.Zhu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/me.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Welcome">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/05/12/http协议/" itemprop="url">Unbenannt</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Veröffentlicht am</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-05-12T20:07:03+08:00">
+                2017-05-12
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><strong>HTTP</strong>协议端口号为80, <strong>HTTPS</strong>的端口号为443</p>
+<hr>
+<p>##HTTP工作流程</p>
+<blockquote>
+<p>一次HTTP操作称为一个事务,其工作可分为四部</p>
+</blockquote>
+<p>1) 首先客户端与服务器需要建立连接. 只要点击某个超链接,HTTP的工作开始</p>
+<p>2) 建立连接后,客户机发送一个请求给服务器,请求方式的格式为:统一资源标识符(URL) 协议版本号,后边是MIME信息包括请求修饰符,客户机信息和可能的内容</p>
+<p>3) 服务器接到请求后,给予响应的响应信息,其格式为一个状态行,包括信息的协议版本号 一个成功或者错误的代码,后边是MIME信息包括服务器信息,实体信息和可能的内容</p>
+<p>4) 客户端接收服务器返回的信息通过浏览器显示在用户的显示屏上,然后客户机与服务器断开连接</p>
+<p>如果在以过程中的某一步出现错误,那么产生错误的信息将返回到客户端,有显示屏输出. 对用户来说,这些过程是HTTP自己完成的,用户只要用鼠标点击,等待信息显示就可以了</p>
+<hr>
+<p>##HTTP协议三次握手过程</p>
+<blockquote>
+<p>TCP(Transmission COntrol Protocol)</p>
+<p>TCP是主机对主机层的传输控制协议,提供可靠的链接服务,采用三次握手企鹅人建立一个链接:</p>
+</blockquote>
+<p>位码 即tcp标志位, 有6中标识: </p>
+<ul>
+<li>SYN(synchronous建立联机)</li>
+<li>ACK(acknowledgement确认)</li>
+<li>PSH(push传送)</li>
+<li>FIN(finish结束)</li>
+<li>RST(reset重置)</li>
+<li>URG(urgent紧急)</li>
+</ul>
+<p>Sequence number(顺序号码) Acknowledge number(确认号码)</p>
+<p>1)第一次握手,主机A发送位码为syn=1,随机产生seq number=1234567的数据包到服务器,主机B由SYN=1知道A要求建立联机;</p>
+<p>2)第二次握手,服务器收到syn包,必须确认客户的syn(ack=j+1),同时自己也发送一个syn包(syn=l),<br>即syn+ack包,此时服务器进入syn-recv状态</p>
+<p>3) 第三次握手:客户端收到服务器的syn+ack包,向服务器发送确认宝ack(ack=k+1),此包发送完毕,客户端和服务器进入estabished状态,完成三次握手. 完成三次握手,客户端与服务器开始传送数据.</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/12/CSS/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Mr.Zhu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/me.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Welcome">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/05/12/CSS/" itemprop="url">Unbenannt</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Veröffentlicht am</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-05-12T20:07:03+08:00">
+                2017-05-12
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <font size="24" color="deeppink">CSS部分</font>
+
+<ul>
+<li><p><strong>介绍一下标准的CSS盒模型</strong><br>-</p>
+<p>  (1)有两种,IE盒子模型 &amp; W3C盒子模型;<br>  (2)盒模型: 内容(content)  填充(padding)  边界(margin)  边框 (border);<br>  (3)区  别: IE的content部分把border和padding计算进去了</p>
+</li>
+<li><p><strong>CSS选择器有哪些? 哪些属性可以继承?</strong><br>-</p>
+<ul>
+<li><ol>
+<li>id选择器 (#myid)</li>
+<li>类选择器 (.myclassName)</li>
+<li>标签选择器 (div, h1, p…)</li>
+<li>相邻选择器 (h1 + p)</li>
+<li>子代选择器 (ul &gt; li)</li>
+<li>通配符选择器 (*)</li>
+<li>后代选择器 (ul li)</li>
+<li>属性选择器 (a[rel = “external”]</li>
+<li>伪类选择器 (a:hover, li:nth-child)</li>
+</ol>
+</li>
+<li><p>可继承的样式 :font-size,font-family,color,ul,li,dl,dd,dt</p>
+</li>
+<li><p>不可继承的样式: border,padding,margin,width,heigth;</p>
+</li>
+</ul>
+</li>
+<li><p><strong>CSS优先级算法如何计算?</strong><br>-</p>
+<ul>
+<li>优先级就近原则,桶权重情况下样式定义最近者为准;</li>
+<li><p>载入样式以最后载入的定位为准</p>
+<p>优先级为:<br>同权重: 内联样式表(标签内部) &gt; 嵌入样式表(当前文件中) &gt; 外部样式表 (外部文件中);<br>!inportant &gt; id &gt; class &gt; tag<br>!improtant 比内联优先级高</p>
+</li>
+</ul>
+</li>
+<li><p><strong> CSS3新增伪类有哪些</strong></p>
+</li>
+<li><p>  举例:<br>  p:first-of-type    选择属于其父元素的首个</p><p>元素的每个</p><p>元素;<br>  p:last-of-type<br>  p:only-of-type<br>  p:only-child<br>  p:nth-child()</p>
+<p>  :after        在元素之前添加内容,也可以用来清楚浮动;<br>  :before        在元素之后添加内容<br>  :enabled<br>  :disabled    控制表单控件的禁用状态;<br>  :cheched    单选框或复选框被选中;</p>
+</li>
+<li><p><strong>如何居中div?</strong><br>-</p>
+<ul>
+<li>水平居中:给div设置一个宽度,然后添加margin:0 auto属性<br>div{<br>   width: 200px;<br>   margin: 0 auto;<br>}</li>
+<li><p>让绝对定位的div居中</p>
+<p>div{<br>   width: 100px;<br>   height: 100px;<br>   background-color: #ccc;<br>   position: absolute;<br>   margin: auto;<br>   top: 0;<br>   left: 0;<br>   right: 0;<br>   bottom: 0;<br>   }</p>
+</li>
+<li><p>水平垂直居中一</p>
+<p>确定容器的宽高 宽500 高 300 的层<br>设置层的外边距</p>
+<p>div {<br>   position: relative;        /<em> 相对定位或绝对定位均可 </em>/<br>   width:500px;<br>   height:300px;<br>   top: 50%;<br>   left: 50%;<br>   margin: -150px 0 0 -250px;         /<em> 外边距为自身宽高的一半 </em>/<br>   background-color: pink;         /<em> 方便看效果 </em>/<br>}</p>
+</li>
+<li><p>水平垂直居中二</p>
+<p> 未知容器的宽高，利用 <code>transform</code> 属性</p>
+<p> div {</p>
+<pre><code>position: absolute;        /* 相对定位或绝对定位均可 */
+width:500px;
+height:300px;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+background-color: pink;         /* 方便看效果 */
+}
+</code></pre></li>
+<li><p>水平垂直居中三</p>
+<p> 利用 flex 布局<br> 实际使用时应考虑兼容性</p>
+<p> .container {</p>
+<pre><code>display: flex;
+align-items: center;         /* 垂直居中 */
+justify-content: center;    /* 水平居中 */
+</code></pre><p> }<br> .container div {</p>
+<pre><code>width: 100px;
+height: 100px;
+background-color: pink;        /* 方便看效果 */
+</code></pre><p> }  </p>
+</li>
+</ul>
+</li>
+<li><p><strong>display有哪些值? 说明他们的作用</strong><br>-</p>
+<ul>
+<li>block            块类型.弄人宽度为父元素宽度,可设置狂傲,换行显示;</li>
+<li>none            缺省值.像行内元素类型一样显示;</li>
+<li>inline        行内元素类型,默认宽度为内容宽度,不可设置宽高,同行显示;</li>
+<li>inline-block    默认宽度为内容快递,可以设置宽高,同行显示;</li>
+<li>list-item        像块类型元素一样显示,并添加样式列标标记;</li>
+<li>table            此元素会作为块级表格来显示;</li>
+<li>inherit        规定应该从父元素继承 display 属性值;</li>
+</ul>
+</li>
+<li><p>**position的值relative和absolute定位原点是?<br>-<br>  absolute:</p>
+<pre><code>绝对定位, 相对于值不为static的第一个父元素进行定位
+</code></pre><p>  fixed (老ie不支持)</p>
+<pre><code>固定定位,相对于浏览器窗口进行定位
+</code></pre><p>  relative</p>
+<pre><code>相对定位,相对于其正常位置进行定位
+</code></pre><p>  static</p>
+<pre><code>默认值, 没有定位,元素出现在正常流中(忽略 top,bottom,left,right,z-index声明)
+</code></pre><p>  inherit</p>
+<pre><code>规定从父元素继承position属性的值
+</code></pre></li>
+<li><p><strong>Css3 有哪些新特性?</strong><br>-<br>  新增各种css选择器:     (:not(.input): 所有class不是’input’的节点)<br>  圆角                     (border-radius:5px)<br>  多列布局                 (multi-column layyout)<br>  阴影和反射            (shadow\reflect)<br>  文字特效                (text-shadow)<br>  文字渲染                (text-decoration)<br>  线性渐变                (gradient)<br>  旋转                    (transform)<br>  缩放,定位,倾斜,动画,多背景<br>  例如Ltransform:\scale(0.85,0.90)\ translate(0px,-30px)\ skew(-9deg,0deg)\Animation</p>
+</li>
+<li><p><strong>请解释CSS3的flexbox(弹性盒布局模型),以及使用场景?</strong><br>-<br>  一个用于页面布局的全新css3功能,flexbox可以把列表放在同一个方向(从上到下排列,从左到右),并让列表能延伸到赵勇可用的空间;<br>  较为复杂的布局还可以通过嵌套一个伸缩容器(flex cotainer)来实现.<br>  用flex布局的元素,称为flex容器(flex item),简称”项目”;<br>  常规布局是基于块和内联流方向,而flex布局是基于flex-flow流可以很方便的用来做居中,能对不同屏幕大小自使用;<br>  在布局上有了比以前更加灵活的空间; </p>
+<p>  具体：<a href="http://www.w3cplus.com/css3/flexbox-basics.html" target="_blank" rel="external">http://www.w3cplus.com/css3/flexbox-basics.html</a></p>
+</li>
+<li><p><strong>用纯css创建一个三角形的原理是什么?</strong><br>-<br>  把上 左 右三条边隐藏掉,(颜色设置为transparent)</p>
+<p>  #demo{</p>
+<pre><code>widht: 0;
+height: 0;
+border-widht: 20px;
+border-style: solid;
+border-color:transparent transparent red transparent;
+}
+</code></pre></li>
+<li><p><strong>一个满屏品字布局 如何设计?</strong><br>-<br>  简单的方式:</p>
+<pre><code>上面一个div宽度:100%;
+下面两个div宽度分别为: 50%;
+然后用float 或者 display:inline-block
+</code></pre></li>
+<li><p><strong>css多列等高如何实现</strong>?<br>-</p>
+<p>   利用padding-bottom | margin-bottom正负值相抵;<br>  设置父容器超出隐藏(overflow: hidden),这样子父容器的高度就还是它里面的列没有设定padding-bottom时的高度,<br>  当它里面的任意一列高度增加了,则父容器的高度被撑到里面最高那列的高度,<br>  其他比这列矮的列 会用它们的padding-bottom补偿这部分高度差</p>
+</li>
+<li><p>**经常遇到的浏览器兼容问题有哪些? 原因是什么?解决方案?常用hack的技巧?<br>-</p>
+<ul>
+<li>png24位的图片在ie6上出现背景,解决办法:做成png8位的图片;</li>
+<li>浏览器默认的margin和padding不容, 解决办法:加一个全局的*{margin:0;padding:0}来统一;</li>
+<li><p>ie6双边距bug:块级属性标签float后,又有横行的margin情况下,在ie6显示margin比设置的大.<br>浮动ie产生的双倍距离 #box{float:left;widht:10px;margin:0 0 0 100px}这种情况下ie会产生20px<br>的距离,解决方案是在float的标签样式控制中加入 –<em>display:inline;转化为行内属性.(</em>这个符号只有ie6识别)<br>渐进识别的方式, 从总体中逐渐排出局部.<br>首先,巧妙的使用”\9”这一标记,将ie浏览器从所有情况中分离出来.<br>接着,再次用”+”将ie8和ie7、ie6分开来，这样ie8已经独立识别。</p>
+<p>css<br>  .bb {</p>
+<pre><code>background-color:rend;//所有识别
+background-color:#00deff\9;//ie6.7.8识别
++background-color:#a200ff;/*IE6、7识别*/
+_background-color:#1e0bd1;/*IE6识别*/
+</code></pre><p>}</p>
+<blockquote>
+<ul>
+<li>ie下,可以使用获取常规属性的方法来获取自定属性,<br>也可以使用getAttribute()获取自定义属;<br>Firefox下只能使用getAttribute()来获取自定义属性.</li>
+<li>解决方法: 统一通过getAttribute()来获取自定义属性;</li>
+</ul>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<ul>
+<li>ie下,event对象有x,y属性,但是没有pageX,pageY属性;<br>Firfox下,event对象有pageX,pageY属性,但是没有x,y属性;</li>
+<li><p>解决办法:(条件注释)缺点是在ie浏览器下可能会增加额外的HTTp请求数.</p>
+</li>
+<li><p>Chrome中文界面下默认小鱼12x的文本强制按照12px显示,<br>可以通过加入css属性 -webkit-text-size-adjust:none解决</p>
+</li>
+</ul>
+<p>超链接访问过后hover样式就不出现了  被点击访问过的超链接样式不在具有hover和active了; 解决法法是改变css属性的排列顺序: L-V-H-A: a:link{} a:visited{} a:active{};</p>
+</blockquote>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/07/12/C3动画/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -385,7 +1150,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2014/07/18/call_apply/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2015/08/21/前端面试收集/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Mr.Zhu">
@@ -404,7 +1169,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2014/07/18/call_apply/" itemprop="url">浅谈JavaScript之applay()方法和call()方法</a></h1>
+                <a class="post-title-link" href="/2015/08/21/前端面试收集/" itemprop="url">前端开发面试题集锦</a></h1>
         
 
         <div class="post-meta">
@@ -416,8 +1181,8 @@
               
                 <span class="post-meta-item-text">Veröffentlicht am</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2014-07-18T14:51:22+08:00">
-                2014-07-18
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2015-08-21T22:10:33+08:00">
+                2015-08-21
               </time>
             
 
@@ -452,362 +1217,172 @@
 
       
         
-          <p>每个函数都包含两个非继承而来的方法：applay()和call()。这两个方法的用途都是在特定的作用域中调用函数，实际上等于设置函数体内this对象的值。首先apply()方法接受两个参数：一个是在其中运行函数的作用域，另一个是参数数组。其中，第二个参数可以是Array的实例，也可以是arguments对象。例如：<br>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2014/07/18/call_apply/#more" rel="contents">
-              Weiterlesen &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
+          
+            <font color="#deeppink" face="微软雅黑" size="6">#<strong>前端开发面试题集锦</strong></font>
 
-    <div>
-      
-    </div>
+<p>前言:</p>
+<ol>
+<li><p>面试题目： 根据你的等级和职位的变化，入门级到专家级，广度和深度都会有所增加。</p>
+</li>
+<li><p>题目类型： 理论知识、算法、项目细节、技术视野、开放性题、工作案例。</p>
+</li>
+<li><p>细节追问： 可以确保问到你开始不懂或面试官开始不懂为止，这样可以大大延展题目的区分度和深度，知道你的实际能力。因为这种知识关联是长时期的学习，临时抱佛脚绝对是记不住的。</p>
+</li>
+<li><p>回答问题再棒，面试官（可能是你面试职位的直接领导），会考虑我要不要这个人做我的同事？所以态度很重要、除了能做事，还要会做人。（感觉更像是相亲( •̣̣̣̣̣̥́௰•̣̣̣̣̣̥̀ )）</p>
+</li>
+<li><p>资深的前端开发能把absolute和relative弄混，这样的人不要也罢，因为团队需要的是：你这个人具有可以依靠的才能（靠谱）。</p>
+</li>
+</ol>
+<p>####知识点:<br>    HTML&amp;CSS：<br>    对Web标准的理解、浏览器内核差异、兼容性、hack、CSS基本功：布局、盒子模型、选择器优先级、<br>    HTML5、CSS3、Flexbox</p>
+<pre><code>JavaScript：
+数据类型、运算、对象、Function、继承、闭包、作用域、原型链、事件、RegExp、JSON、Ajax、
+DOM、BOM、内存泄漏、跨域、异步装载、模板引擎、前端MVC、路由、模块化、Canvas、ECMAScript 6、Nodejs
 
-    <div>
-      
-    </div>
+其他：
+移动端、响应式、自动化构建、HTTP、离线存储、WEB安全、优化、重构、团队协作、可维护、易用性、SEO、UED、架构、职业生涯、快速学习能力
+</code></pre><p>####作为一名前端工程师，无论工作年头长短都应该掌握的知识点：</p>
+<pre><code>1、DOM结构 —— 两个节点之间可能存在哪些关系以及如何在节点之间任意移动。
 
-    <div>
-      
-    </div>
+2、DOM操作 —— 如何添加、移除、移动、复制、创建和查找节点等。
 
-    <footer class="post-footer">
-      
+3、事件 —— 如何使用事件，以及IE和标准DOM事件模型之间存在的差别。
 
-      
+4、XMLHttpRequest —— 这是什么、怎样完整地执行一次GET请求、怎样检测错误。
 
-      
+5、严格模式与混杂模式 —— 如何触发这两种模式，区分它们有何意义。
 
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
+6、盒模型 —— 外边距、内边距和边框之间的关系，及IE8以下版本的浏览器中的盒模型
 
+7、块级元素与行内元素 —— 怎么用CSS控制它们、以及如何合理的使用它们
 
-    
-      
+8、浮动元素 —— 怎么使用它们、它们有什么问题以及怎么解决这些问题。
 
-  
+9、HTML与XHTML —— 二者有什么区别，你觉得应该使用哪一个并说出理由。
 
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2014/07/05/Ajax有关知识/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Mr.Zhu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/me.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Welcome">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2014/07/05/Ajax有关知识/" itemprop="url">Ajax有关知识</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Veröffentlicht am</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2014-07-05T23:21:55+08:00">
-                2014-07-05
-              </time>
-            
-
-            
-
-            
-          </span>
+10、JSON —— 作用、用途、设计结构。
+</code></pre><h2 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h2><ul>
+<li><strong>Doctype作用? 标准模式与兼容模式各有什么区别?</strong></li>
+<li></li>
+</ul>
+<blockquote>
+<p>(1). &lt;!DOCTYPE&gt;声明位于HTML文档中的第一行,处于<html>标签之前.告知浏览器的解析器用什么文档标准节气这个文档.DOCTYPE不存在或者格式不争取会导致文档以兼容模式呈现.</html></p>
+<p>(2). 标准模式排版和js运作模式都是以该浏览器支持的最高标准运行的.在兼容模式中,页面以宽松的向后兼容的方式显示,模拟老式浏览器的行为以防止站点无法工作.</p>
+</blockquote>
+<ul>
+<li><strong>HTML5为什么只需要写&lt;!DOCTYPE&gt;?</strong></li>
+<li><blockquote>
+<p>HTML5不基于<strong>SGMl</strong>,因此不需要对DTD进行引用,但是需要doctype在规范浏览器的行为(让浏览器按照他们应该的方式来运行)<br>而HTML4.01 基于SGML,所以需要DTD进行引用,才能告知浏览器所使用的文档类型.</p>
+</blockquote>
+</li>
+<li><strong>行内元素有哪些? 块级元素有哪些? 空(void)元素有哪些?</strong></li>
+<li><p>  首先:css规范规定,每个元素都有display属性,确定该元素的类型,每个元素都有默认的display值,如div的display默认值为’block’,<br>  则为块级元素; span默认display值为’inline’,是行内元素.</p>
+<p>  (1) 行内元素有: a b span img input select strong<br>  (2) 块级元素有: div p ul ol li dl dd h1…h6<br>  (3) 常见空元素: <br> <hr> <img> <input> <link> <meta></p>
+<p>   鲜为人知的是: <area> <base> <col> <commad> <keygen> <param> <source> <track> <wbr></commad></p>
+<p>  不同浏览器(版本).HTML4(5).CSS2等实际略有差异<br>  参考:<a href="http://stackoverflow.com/questions/6867254/browsers-default-css-for-html-elements" target="_blank" rel="external">http://stackoverflow.com/questions/6867254/browsers-default-css-for-html-elements</a></p>
+</li>
+<li><p><strong>页面导入样式时,使用link和@import有什么区别?</strong></p>
+</li>
+<li><blockquote>
+<p>(1) link属于XHTML标签,除了加载css外,还能定义Rss, 定义rel链接属性等作用; 而@import是CSS提供的,只能用于加载CSS.<br>(2) 页面被加载时,link会同时被加载,而@import引用的CSS会等到页面加载完在加载;<br>(3) import是CSS2.1提出的,值有在ie5以上才被识别,而link是XHTML标签,无兼容问题;</p>
+</blockquote>
+</li>
+<li><p><strong>介绍一下你对浏览器内核的理解</strong></p>
+</li>
+<li><p>  主要分为两部分:<strong>渲染引擎</strong>(layout engineer或Rendering Engine)和<strong>js引擎</strong>.<br>  渲染引擎:负责取得网页内容(HTML,XML,图像等等),整理讯息(例如加入CSS等),以及计算网页显示方式,然后输出至显示器或打印机.<br>  浏览器的内核不同对于网页的语法解释会有不同,所以渲染的效果也不相同. 所有网页浏览器,电子邮件客户端以及其他需要编辑、<br>  显示网络内容的应用程序都需要内核。<br>  js引擎：解析和执行JavaScript来实现网页的动态效果。<br>  最开始渲染引擎和js引擎并没有区分的很明确，后来js引擎越来越独立，内核就倾向于只指渲染引擎。</p>
+</li>
+<li><p><strong>常见的浏览器内核有哪些？</strong></p>
+</li>
+<li><ul>
+<li>Trident内核： IE（又称MSHTML）</li>
+<li>Gecko内核： Firefox浏览器</li>
+<li>Webkit内核：Safari、Chrome浏览器等</li>
+<li><p>Presto内核：Opera浏览器（opera内核原为：Presto，现为：Blink）</p>
+<p>详细文章：<a href="http://www.cnblogs.com/fullhouse/archive/2011/12/19/2293455.html" target="_blank" rel="external">浏览器内核的解析和对比</a></p>
+</li>
+</ul>
+</li>
+<li><p><strong>html5有哪些新特性、移除了哪些元素？如何吹html5新标签浏览器兼容问题？如何区分HTML和HTML5？</strong></p>
+</li>
+<li><p>  *HTML5现在已经不是SGML的子集，主要是关于图像，位置，存储，多任务等功能的增加。<br>  绘画： canvas；<br>  用于媒介回放的：video和audio元素；<br>  本地离线存储：localStorage 长期存储数据，浏览器关闭数据不会丢失；<br>  sessionStorage的数据在浏览器关闭后自动删除；<br>  语义化更好的元素内容， 比如 article、footer、header、nav、section；<br>  表单控件：calender、date、time、email、url、search；<br>  新的技术：webworker，websocket，Geolocation；</p>
+<p>  <strong>移除的元素</strong>：<br>  纯表现的元素： basefont，big，center，font，s，strike，tt，u；<br>  对可用性产生负面影响的元素：frame，frameset，noframes；</p>
+<p>  *支持HTML5新标签：<br>  IE8/IE7/IE6/支持通过document.createElement方法产生的标签，<br>  可以利用这一特性让这些浏览器支持HTML5新标签，<br>  浏览器支持新标签后，还需要添加默认的样式。</p>
+<p>  当然也可以直接使用成熟的框架： 比如html5shim；</p>
+   <!--[if lt IE 9]>
+     <script> src="http://html5shim.googlecode.com/svn/trunk/html5.js"</script>
+   <![endif]-->
+</li>
+<li><p><strong>简述一下你对HTML5语义化的理解</strong></p>
+</li>
+<li><p>  用正确的标签做正确的事。<br>  html语义化让页面的内容结构化，结构更清晰，便于浏览器、搜索引擎的解析；<br>  即使在没有CSS样式的情况下也以一种文档格式显示，并且是容易阅读的。<br>  搜索引擎的爬虫也依赖于HTML标记来确定上下文和各个关键字的权重，利于SEO；<br>  使阅读代码的人对网站更容易将网站分块，便于阅读维护理解。</p>
+</li>
+<li><p><strong>HTML5的离线存储怎么使用，工作原理</strong><br>-<br>  在用户没有与因特网连接时，可以正常访问站点或应用，在用户与因特网连接时，更新用户机器上的缓存文件。<br>  原理： HTML5的离线存储是基于一个新建的.appcahce文件的缓存机制(不是存储技术), 通过这个文件上的解析清单离线存储资源,<br>  这些资源就会像cookie一样被存储下来。之后当网络处于离线状态下时，浏览器会通过被离线存储的数据进行页面展示。</p>
+<p>  如何使用：<br>  1、 页面头部下面一样加入一个manifest的属性；<br>  2 、在cache.manifest文件的编写离线存储的资源;</p>
+<pre><code>CACHE MANIFEST
+#v0.11
+CACHE:
+js/app.js
+css/style.css
+NETWORK:
+resourse/logo.png
+FALLBACK:
+/ /offline.html
+</code></pre><p>  3、 在离线状态时，操作系统window.applicationCache进行需求实现。</p>
+<p>  详细的使用请参考：</p>
+<p>  <a href="http://yanhaijing.com/html/2014/12/28/html5-manifest/" target="_blank" rel="external">HTML5 离线缓存-manifest简介</a></p>
+<p>  <a href="http://segmentfault.com/a/1190000000732617" target="_blank" rel="external">有趣的HTML5：离线存储</a></p>
+</li>
+</ul>
+<p>3/17/2017 2:11:36 PM</p>
+<ul>
+<li>**浏览器是怎么对HTML5的离线存储资源进行管理和加载的呢？</li>
+<li><p>  在线的情况下，浏览器会发现html头部有manifest属性，他会请求manifest文件，如果是第一次访问app，<br>  那么浏览器会根据manifest文件的内容下载相应的资源并且进行离线存储。如果已经访问过app<br>  并且资源已经离线存储了，那么浏览器会使用离线资源加载页面，然后浏览器会对比新的manifest<br>  文件与旧的manifest文件，如文件没有发生改变，就不做任何操作，如果文件改变了，那么就会<br>  重现下载文件中的资源，并进行离线存储。<br>  离线的情况下，浏览器就直接使用离线存储的资源。</p>
+<p>  详细请参考：有趣的HTML5：离线存储</p>
+</li>
+<li><p><strong>请描述一下 coolies,sessionStrorage和IocalStroge的区别?</strong></p>
+</li>
+<li><p>  cookie是网站为了标识用户身份而存储在用户本地终端(Client Side)上的数据(通常经过加密).<br>  cookie数据书中在同源的http请求中携带(即使不需要),也会在服务器和浏览器间来回传递。<br>  sessionStroage和localStroage不会自动把数据发给服务器，仅在本地保存。</p>
+<p>  存储大小：<br>  cookie数据大小不能超过4k<br>  sessionStorage和localStorage 虽然也有存储大小的限制，但比cookie大的多，可以达到5M或更大。</p>
+<p>  有期时间：<br>  localStorage    存储持久数据，浏览器关闭后数据不回丢失，除非主动删除数据。<br>  sessionStorage  数据在当前浏览器窗口关闭后自动删除。<br>  coolie            设置的cookie过期时间之前一直有效，即使窗口或浏览器关闭。</p>
+</li>
+<li><p><strong>iframe有哪些缺点？</strong></p>
+</li>
+<li><em>iframe会阻塞主页面的Onload时间；
+</em>搜索引擎的检索程序无法解读这种页面， 不利于SEO；<br>*iframe和主页面共享链接池，而浏览器对相同域的链接有限制，所以会影响页面的并行加载。</li>
+</ul>
+<p>使用iframe之前要考虑这几点缺点， 还如果需要使用iframe， 最好是通过JavaScript<br>动态给iframe添加src属性，这样可以绕开上述问题。</p>
+<ul>
+<li><p><strong>Label的作用是什么？ 是怎么用的？</strong><br>-<br>  label标签来定义表单控制间的关系，当用户选择该标签时，浏览器会自动将焦点转到和标签相关的表单控件上。</p>
+  <label for="Name"> Number: </label><br>  <input type="text" name="name" id="Name"><br>  <label>Date:<input type="text" name="B"></label>
+</li>
+<li><p>**HTMl5的form如何关闭自动完成功能?<br>-</p>
+<blockquote>
+<p>给不想要提示的form或某个input设置为autocomplete = off;</p>
+</blockquote>
+</li>
+<li><p><strong>如何实现浏览器内过个页面之间的通信?(阿里)</strong></p>
+</li>
+<li><blockquote>
+<p>WebSocket、SharedWorker；<br>也可以调用localstorge、cookies等本地存储方式；<br>localstorge另一个浏览上下文里被添加、修改或删除时，它都会触发一个时间，<br>我们通过监听时间，控制它的值来进行页面信息通信；<br>注意： quirks： Safari 在无痕模式下设置localstorge值时会抛出QuotaExceedeError的异常；</p>
+</blockquote>
+</li>
+<li><p><strong>陀可见性（Page Visibility API）可以有哪些用途？</strong></p>
+</li>
+<li><blockquote>
+<p>通过visibilityState的检测陀当前是否可见, 以及打开网页的时间等;<br>在页面被切换到其他后台进程的时候,自动暂停音乐或视频播放;</p>
+</blockquote>
+</li>
+<li><p><strong>如何在页面实现一个圆形的可点击区域?</strong><br>-<br>  1.map+area或者svg<br>  2.border-radius<br>  3.纯js实现 需要求一个点不在园上简单算法.获取鼠标坐标等等;</p>
+</li>
+<li><p><strong>实现不适用border 画出1px高的先, 在不同浏览器的标准模式与冠以模式下都能保持一致</strong><br>-</p>
+  <div style="height:1px; overflow:hidden;background:red"></div>
+</li>
+<li><p><strong>网页验证是干嘛用的,是为了解决什么安全问题?</strong><br>-<br>  区分用户是计算机还是人的公共全自动程序. 可防止恶意皮杰密码、刷票、论坛灌水；<br>  有效防止黑客对某一个特定注册用户特定程序暴力破解方式进行不断的登录尝试。</p>
+</li>
+<li><p><strong>title与h1的区别、 b与strong的区别、i与em的区别？</strong><br>-<br>  title属性没有明确意义,只表示是个标题, h1则表示层次明确的标题,对页面信息的抓取有很大的影响;<br>  strong是表明重点内容,有语气加强的含义,使用阅读设备阅读网络时:<strong>会重读,而<b>是展示强调内容;<br>  <i>内容展示为斜体,<em>表示强调的文本;</em></i></b></strong></p>
+</li>
+</ul>
 
           
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>最近在实际的项目中经常会用到Ajax，之前对于Ajax的了解不多，后来通过一段时间的学习突然发现Ajax在很多功能方面能够节省很多不必要的弯路，并且能够是实现我们所说的局部刷新，这使得页面的友好性大大得到了增强，很多开发者都学习了Ajax的相关技术，通过与后台的结合能够开发出很多意想不到的效果，下面是本人在学习阶段整理的一些Ajax手记，希望会对大家有所帮助 。</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2014/07/05/Ajax有关知识/#more" rel="contents">
-              Weiterlesen &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2014/06/28/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Mr.Zhu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/me.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Welcome">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2014/06/28/hello-world/" itemprop="url">初识jQuery</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Veröffentlicht am</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2014-06-28T22:10:33+08:00">
-                2014-06-28
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>jQuery是一款非常流行的Javascript框架，如果你想要从事Web前端开发这个岗位，那么jQuery是你必须掌握而且能够熟练应用的一门技术。本文整理了一些关于jQuery的经典面试题及答案，分享给正要面试Web开发岗位的同学。<br>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2014/06/28/hello-world/#more" rel="contents">
-              Weiterlesen &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2014/05/21/css垂直水平居中/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Mr.Zhu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/me.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Welcome">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2014/05/21/css垂直水平居中/" itemprop="url">CSS垂直水平居中的问题</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Veröffentlicht am</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2014-05-21T22:10:33+08:00">
-                2014-05-21
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>总做中可能会遇到各种需要垂直水平居中的问题，这里总结下我常见的几中。<br>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2014/05/21/css垂直水平居中/#more" rel="contents">
-              Weiterlesen &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
         
       
     </div>
@@ -889,7 +1464,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-count">10</span>
                 <span class="site-state-item-name">Artikel</span>
               </a>
             </div>
