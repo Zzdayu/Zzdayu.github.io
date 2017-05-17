@@ -93,16 +93,16 @@
 <meta name="description" content="项目中需要实现扫描二维码的功能,因为涉及硬件接口,而且自己本身是做前端开发的,本没有原生开发背景,所以记录下自己在开发中踩的坑。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="react-native二维码扫描">
-<meta property="og:url" content="http://yoursite.com/2016/07/12/React-Native-barcodescanner 实现二维码扫描/index.html">
+<meta property="og:url" content="http://yoursite.com/2016/09/23/React-Native-barcodescanner 实现二维码扫描/index.html">
 <meta property="og:site_name" content="Welcome">
 <meta property="og:description" content="项目中需要实现扫描二维码的功能,因为涉及硬件接口,而且自己本身是做前端开发的,本没有原生开发背景,所以记录下自己在开发中踩的坑。">
-<meta property="og:image" content="http://yoursite.com/2016/07/12/React-Native-barcodescanner%20实现二维码扫描/images/12_20170515211527.png">
-<meta property="og:image" content="d:/blog/source/images/微信截图_20170515211527.png">
-<meta property="og:updated_time" content="2017-05-17T02:51:13.386Z">
+<meta property="og:image" content="http://yoursite.com/2016/09/23/React-Native-barcodescanner%20实现二维码扫描/images/12_20170515211527.png">
+<meta property="og:image" content="http://yoursite.com/2016/09/23/images/12_20170515211527.png">
+<meta property="og:updated_time" content="2017-05-17T03:11:37.161Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="react-native二维码扫描">
 <meta name="twitter:description" content="项目中需要实现扫描二维码的功能,因为涉及硬件接口,而且自己本身是做前端开发的,本没有原生开发背景,所以记录下自己在开发中踩的坑。">
-<meta name="twitter:image" content="http://yoursite.com/2016/07/12/React-Native-barcodescanner%20实现二维码扫描/images/12_20170515211527.png">
+<meta name="twitter:image" content="http://yoursite.com/2016/09/23/React-Native-barcodescanner%20实现二维码扫描/images/12_20170515211527.png">
 
 
 
@@ -130,7 +130,7 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2016/07/12/React-Native-barcodescanner 实现二维码扫描/"/>
+  <link rel="canonical" href="http://yoursite.com/2016/09/23/React-Native-barcodescanner 实现二维码扫描/"/>
 
 
 
@@ -265,7 +265,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/07/12/React-Native-barcodescanner 实现二维码扫描/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/09/23/React-Native-barcodescanner 实现二维码扫描/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Mr.Zhu">
@@ -294,8 +294,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-07-12T17:14:33+08:00">
-                2016-07-12
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-09-23T17:10:33+08:00">
+                2016-09-23
               </time>
             
 
@@ -418,7 +418,7 @@ var styles = StyleSheet.create({
 <p>点下运行按钮，结果报错了： Code signing is required for product type ‘xxxx’ in SDK ‘iOS 8.0’</p>
 <p>宝宝，没搞过 iOS，宝宝心里苦。大意是说要什么什么签名，一般这种设置应该都在项目的公共设置里面吧，于是点了下项目文件，还真有个 Signing ，于是添加了一堆东西进去。</p>
 <p><img src="images/12_20170515211527.png" alt=""> </p>
-<p><img src="D:/blog/source/images/微信截图_20170515211527.png"></p>
+<p><img src="../images/12_20170515211527.png"></p>
 <p>再点运行，又报错了： Code signing is required for product type ‘Unit Test Bundle’ in SDK ‘iOS 8.0’</p>
 <p>这单元测试包是啥子，于是 google 一番，原来这个地方是可以下拉的，没文化真可怕：</p>
 <p>和上面那个一样，这里也是设置一番就好。其中要确认 “Code Signing Identity” 这一项不能是 “Don’t Code Sign”。</p>
