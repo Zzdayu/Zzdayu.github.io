@@ -94,9 +94,9 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="CSS相关知识">
 <meta property="og:url" content="http://yoursite.com/2014/07/05/CSS/index.html">
-<meta property="og:site_name" content="朱红雨的博客">
+<meta property="og:site_name" content="hello world">
 <meta property="og:description" content="介绍一下标准的CSS盒模型-">
-<meta property="og:updated_time" content="2017-05-17T02:42:29.860Z">
+<meta property="og:updated_time" content="2017-05-17T13:33:25.541Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CSS相关知识">
 <meta name="twitter:description" content="介绍一下标准的CSS盒模型-">
@@ -133,7 +133,7 @@
 
 
 
-  <title>CSS相关知识 | 朱红雨的博客</title>
+  <title>CSS相关知识 | hello world</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -169,7 +169,7 @@
     <div class="custom-logo-site-title">
       <a href="/"  class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">朱红雨的博客</span>
+        <span class="site-title">hello world</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -271,7 +271,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="朱红雨的博客">
+      <meta itemprop="name" content="hello world">
     </span>
 
     
@@ -447,7 +447,7 @@ border-color:transparent transparent red transparent;
 <li><p>**经常遇到的浏览器兼容问题有哪些? 原因是什么?解决方案?常用hack的技巧?<br>-</p>
 <ul>
 <li>png24位的图片在ie6上出现背景,解决办法:做成png8位的图片;</li>
-<li>浏览器默认的margin和padding不容, 解决办法:加一个全局的*{margin:0;padding:0}来统一;</li>
+<li>浏览器默认的margin和padding不容, 解决办法:加一个全局的*&#123;margin:0;padding:0&amp;#125来统一;</li>
 <li><p>ie6双边距bug:块级属性标签float后,又有横行的margin情况下,在ie6显示margin比设置的大.<br>浮动ie产生的双倍距离 #box{float:left;widht:10px;margin:0 0 0 100px}这种情况下ie会产生20px<br>的距离,解决方案是在float的标签样式控制中加入 –<em>display:inline;转化为行内属性.(</em>这个符号只有ie6识别)<br>渐进识别的方式, 从总体中逐渐排出局部.<br>首先,巧妙的使用”\9”这一标记,将ie浏览器从所有情况中分离出来.<br>接着,再次用”+”将ie8和ie7、ie6分开来，这样ie8已经独立识别。</p>
 <p>css<br>  .bb {</p>
 <pre><code>background-color:rend;//所有识别
@@ -473,7 +473,7 @@ _background-color:#1e0bd1;/*IE6识别*/
 <li><p>Chrome中文界面下默认小鱼12x的文本强制按照12px显示,<br>可以通过加入css属性 -webkit-text-size-adjust:none解决</p>
 </li>
 </ul>
-<p>超链接访问过后hover样式就不出现了  被点击访问过的超链接样式不在具有hover和active了; 解决法法是改变css属性的排列顺序: L-V-H-A: a:link{} a:visited{} a:active{};</p>
+<p>超链接访问过后hover样式就不出现了  被点击访问过的超链接样式不在具有hover和active了; 解决法法是改变css属性的排列顺序: L-V-H-A: a:link&#123; &#125; a:visited&#123; &#125; a:active&#123; &#125;;</p>
 </blockquote>
 
       
@@ -511,7 +511,7 @@ _background-color:#1e0bd1;/*IE6识别*/
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2014/06/28/hello-world/" rel="next" title="初识jQuery">
+              <a href="/2014/06/28/jQuery/" rel="next" title="初识jQuery">
                 <i class="fa fa-chevron-left"></i> 初识jQuery
               </a>
             
