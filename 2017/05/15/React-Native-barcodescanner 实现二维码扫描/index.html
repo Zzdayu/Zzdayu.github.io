@@ -74,7 +74,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="随笔," />
+  <meta name="keywords" content="javaScript" />
 
 
 
@@ -90,17 +90,19 @@
 
 
 
-<meta name="description" content="总做中可能会遇到各种需要垂直水平居中的问题，这里总结下我常见的几中。">
-<meta name="keywords" content="随笔">
+<meta name="description" content="react-native二维码扫描 date:2016-7-12 17:14:33项目中需要实现扫描二维码的功能,因为涉及硬件接口,而且自己本身是做前端开发的,本没有原生开发背景,所以记录下自己在开发中踩的坑。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="CSS垂直水平居中的问题">
-<meta property="og:url" content="http://yoursite.com/2014/05/21/css垂直水平居中/index.html">
+<meta property="og:title" content="Welcome">
+<meta property="og:url" content="http://yoursite.com/2017/05/15/React-Native-barcodescanner 实现二维码扫描/index.html">
 <meta property="og:site_name" content="Welcome">
-<meta property="og:description" content="总做中可能会遇到各种需要垂直水平居中的问题，这里总结下我常见的几中。">
-<meta property="og:updated_time" content="2017-05-10T09:37:13.551Z">
+<meta property="og:description" content="react-native二维码扫描 date:2016-7-12 17:14:33项目中需要实现扫描二维码的功能,因为涉及硬件接口,而且自己本身是做前端开发的,本没有原生开发背景,所以记录下自己在开发中踩的坑。">
+<meta property="og:image" content="d:/blog/source/images/12_20170515211527.png">
+<meta property="og:image" content="d:/blog/source/images/微信截图_20170515211527.png">
+<meta property="og:updated_time" content="2017-05-15T13:25:29.453Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="CSS垂直水平居中的问题">
-<meta name="twitter:description" content="总做中可能会遇到各种需要垂直水平居中的问题，这里总结下我常见的几中。">
+<meta name="twitter:title" content="Welcome">
+<meta name="twitter:description" content="react-native二维码扫描 date:2016-7-12 17:14:33项目中需要实现扫描二维码的功能,因为涉及硬件接口,而且自己本身是做前端开发的,本没有原生开发背景,所以记录下自己在开发中踩的坑。">
+<meta name="twitter:image" content="d:/blog/source/images/12_20170515211527.png">
 
 
 
@@ -128,13 +130,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2014/05/21/css垂直水平居中/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/05/15/React-Native-barcodescanner 实现二维码扫描/"/>
 
 
 
 
 
-  <title>CSS垂直水平居中的问题 | Welcome</title>
+  <title> | Welcome</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -263,7 +265,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2014/05/21/css垂直水平居中/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/15/React-Native-barcodescanner 实现二维码扫描/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Mr.Zhu">
@@ -280,7 +282,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">CSS垂直水平居中的问题</h1>
+          <h1 class="post-title" itemprop="name headline"></h1>
         
 
         <div class="post-meta">
@@ -292,8 +294,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2014-05-21T22:10:33+08:00">
-                2014-05-21
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-15T21:06:09+08:00">
+                2017-05-15
               </time>
             
 
@@ -327,36 +329,110 @@
       
 
       
-        <p>总做中可能会遇到各种需要垂直水平居中的问题，这里总结下我常见的几中。<br><a id="more"></a></p>
-<h2 id="第一：利用定位position："><a href="#第一：利用定位position：" class="headerlink" title="第一：利用定位position："></a>第一：利用定位position：</h2><h3 id="1在元素宽高已知的情况下，配合负margin达到水平居中"><a href="#1在元素宽高已知的情况下，配合负margin达到水平居中" class="headerlink" title="1在元素宽高已知的情况下，配合负margin达到水平居中"></a>1在元素宽高已知的情况下，配合负margin达到水平居中</h3><pre><code>  .parent
-{
-        position:relative
+        <hr>
+<p>react-native二维码扫描</p>
+<h2 id="date-2016-7-12-17-14-33"><a href="#date-2016-7-12-17-14-33" class="headerlink" title="date:2016-7-12 17:14:33"></a>date:2016-7-12 17:14:33</h2><p>项目中需要实现扫描二维码的功能,因为涉及硬件接口,而且自己本身是做前端开发的,本没有原生开发背景,所以记录下自己在开发中踩的坑。</p>
+<a id="more"></a>
+<blockquote>
+<p>扫描二维码</p>
+</blockquote>
+<p>首先当然是 google 一下看看是否有现成的 React Native 库支持二维码，感谢最大的同性交友网站 GitHub，还真有两个： react-native-camera 和 react-native-barcodescanner 。</p>
+<p>不过，各自都有一点问题，react-native-camera 主要是用来调用摄像头的，Android iOS 都可以用，但是识别条形码的功能只有 iOS 有，而react-native-barcodescanner 直接只支持 Android。于是为了方便，有人把这两个库搞到一起，弄了个 react-native-barcode-scanner-universal 。里面代码也比较简单，就是利用 React Native 根据不同平台会去读 xxx.ios.js 或者 xxx.android.js 的原理，写一个公共的 index.js 然后分别调用不同平台的库。</p>
+<pre><code>// index.js
+module.exports = require(&quot;./BarcodeScanner&quot;);
+
+// BarcodeScanner.android.js
+import BarcodeScanner from &quot;react-native-barcodescanner&quot;;
+module.exports = BarcodeScanner;
+
+// BarcodeScanner.ios.js
+import Camera from &quot;react-native-camera&quot;;
+module.exports = Camera;
+</code></pre><p>既然都打包好了，那我们就开始用 react-native-barcode-scanner-universal 这个库吧。</p>
+<p>既然是要调用硬件 API，那肯定有原生代码在里面，需要把原生模块给链接到相应的原生项目中。</p>
+<pre><code>import BarcodeScanner from &apos;react-native-barcode-scanner-universal&apos;
+
+import React, {Component} from &apos;react&apos;;
+import {
+    StyleSheet,
+    View,
+    Text,
+    Platform
+} from &apos;react-native&apos;;
+
+export default class ScanView extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            code: &quot;None&quot;
+        };
+        this._show = this._show.bind(this);
+    }
+
+    render() {
+        let scanArea = null;
+        if (Platform.OS === &apos;ios&apos;) {
+            scanArea = (
+                &lt;View style={styles.rectangleContainer}&gt;
+                    &lt;View style={styles.rectangle} /&gt;
+                &lt;/View&gt;
+            )
+        }
+        return (
+            &lt;View&gt;
+                &lt;Text style={ [{color:&quot;red&quot;},{fontSize:16}] }&gt;{this.state.code}&lt;/Text&gt;
+                &lt;BarcodeScanner
+                    onBarCodeRead={ (code) =&gt; this._show(code)}
+                    style={styles.camera}&gt;
+                    {scanArea}
+                &lt;/BarcodeScanner&gt;
+            &lt;/View&gt;
+        )
+    }
+
+    _show(val) {
+        this.setState({
+            code:val.data
+        })
+    }
 }
-.child
-{
-    position:absolute;
-    top:50 %;
-    left:50 %;
-    width:50px;
-    height:50px:
-    margin:-25px;
-    margin-top:-25px
-}
-</code></pre><h3 id="2宽高未知的情况下，利用CSS3的属性"><a href="#2宽高未知的情况下，利用CSS3的属性" class="headerlink" title="2宽高未知的情况下，利用CSS3的属性"></a>2宽高未知的情况下，利用CSS3的属性</h3><pre><code>.parent{position:relative}
-.child{position:absolute;
-    top:50%;
-    left:50%;
-        width:50px;height:50px:
-    transform：translate(-50%,-50%)
-}
-</code></pre><h3 id="3利用绝对定位元素的盒模型特性，在偏移属性为确定值的基础上，设置margin-auto"><a href="#3利用绝对定位元素的盒模型特性，在偏移属性为确定值的基础上，设置margin-auto" class="headerlink" title="3利用绝对定位元素的盒模型特性，在偏移属性为确定值的基础上，设置margin:auto"></a>3利用绝对定位元素的盒模型特性，在偏移属性为确定值的基础上，设置margin:auto</h3><pre><code>.parent{position:relative}
-.child{position:absolute;
-    top:0; bottom:0;
-    left:0;right:0;
-    margin:auto
-    width:50px;height:50px:
-}
-</code></pre>
+
+var styles = StyleSheet.create({
+    camera: {
+        flex: 1
+    },
+    rectangleContainer: {
+        flex: 1,
+        alignItems: &apos;center&apos;,
+        justifyContent: &apos;center&apos;,
+        backgroundColor: &apos;transparent&apos;
+    },
+    rectangle: {
+        height: 250,
+        width: 250,
+        borderWidth: 2,
+        borderColor: &apos;#00FF00&apos;,
+        backgroundColor: &apos;transparent&apos;
+    }
+})
+</code></pre><p>简单解释一下，就是一进来就开始扫，识别到东西就现实到上面的 <text> 中去。</text></p>
+<p>实际运行一下，由于要使用摄像头，这里电脑要连一个 iOS 设备。我用 Xcode 打开 React Native 工程，设置好使用真机调试。</p>
+<p>点下运行按钮，结果报错了： Code signing is required for product type ‘xxxx’ in SDK ‘iOS 8.0’</p>
+<p>宝宝，没搞过 iOS，宝宝心里苦。大意是说要什么什么签名，一般这种设置应该都在项目的公共设置里面吧，于是点了下项目文件，还真有个 Signing ，于是添加了一堆东西进去。</p>
+<p><img src="d:/blog/source/images/12_20170515211527.png" alt=""> </p>
+<p><img src="D:/blog/source/images/微信截图_20170515211527.png"></p>
+<p>再点运行，又报错了： Code signing is required for product type ‘Unit Test Bundle’ in SDK ‘iOS 8.0’</p>
+<p>这单元测试包是啥子，于是 google 一番，原来这个地方是可以下拉的，没文化真可怕：</p>
+<p>和上面那个一样，这里也是设置一番就好。其中要确认 “Code Signing Identity” 这一项不能是 “Don’t Code Sign”。</p>
+<p>又一次按下运行键，这次显示构建成功，在 iOS 设备上信任了开发证书之后，打开程序，因为我是一打开程序就开始扫描的，于是 Crash 了。</p>
+<p>这时候 Xcode 控制台幽幽的飘出一个错误：</p>
+<p>简单来说：因为你想用敏感数据，又没有事先告诉我，所以我让你挂了，如果你想不挂，就去 Info.plist 里面按我说的添加点东西，说说你为什么要用这些数据。</p>
+<p>多么友好的提示啊，于是就按照提示加加加，找到项目的 Info.plist 文件，右键选择 Open As -&gt; Source Code ， 添加它说的东西，里面的文字就是每次新装应用弹的框提示要什么什么权限的：</p>
+<p>这里顺便把访问照片库的权限也给加了。关于 iOS 加权限的可以参考 [这篇文章]<a href="http://www.jianshu.com/p/c212cde86877(" target="_blank" rel="external">http://www.jianshu.com/p/c212cde86877(</a>)</p>
+<p>之后让我再给个机会运行一下，同意一堆权限之后，终于看到摄像头画面了，试试扫一扫，还真成功了。</p>
+<p>总结<br>总结一下，这次跌跌撞撞的经历</p>
+<p>把库链接好；<br>把程序的签名弄好；<br>把该加的权限加号，虽然这里是用 iOS 做例子，可想而知，Android 一样要在 Gradle 文件里面弄一波权限；<br>了解原生开发很重要<br>React Native 的哲学是 『Learn once, write anywhere』，实际使用下来，感觉却是『Learn once, and learn others』，也就是常说的『一专多长』。 既要学习 React Native 本身的内容，也要学习 Android，iOS 的知识，不说了，赶快去亚马逊上买本 OC 的书压压惊。</p>
+
       
     </div>
 
@@ -383,12 +459,6 @@
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/随笔/" rel="tag"># 随笔</a>
-          
-        </div>
-      
 
       
         
@@ -398,8 +468,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2014/05/20/hello-world - 副本/" rel="next" title="Hello World">
-                <i class="fa fa-chevron-left"></i> Hello World
+              <a href="/2016/07/12/C3动画/" rel="next" title="C3动画">
+                <i class="fa fa-chevron-left"></i> C3动画
               </a>
             
           </div>
@@ -407,10 +477,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2014/06/28/hello-world/" rel="prev" title="初识jQuery">
-                初识jQuery <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -530,7 +596,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#第一：利用定位position："><span class="nav-number">1.</span> <span class="nav-text">第一：利用定位position：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1在元素宽高已知的情况下，配合负margin达到水平居中"><span class="nav-number">1.1.</span> <span class="nav-text">1在元素宽高已知的情况下，配合负margin达到水平居中</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2宽高未知的情况下，利用CSS3的属性"><span class="nav-number">1.2.</span> <span class="nav-text">2宽高未知的情况下，利用CSS3的属性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3利用绝对定位元素的盒模型特性，在偏移属性为确定值的基础上，设置margin-auto"><span class="nav-number">1.3.</span> <span class="nav-text">3利用绝对定位元素的盒模型特性，在偏移属性为确定值的基础上，设置margin:auto</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#date-2016-7-12-17-14-33"><span class="nav-number">1.</span> <span class="nav-text">date:2016-7-12 17:14:33</span></a></li></ol></div>
             
 
           </div>
