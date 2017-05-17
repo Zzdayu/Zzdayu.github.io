@@ -74,7 +74,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="随笔," />
+  <meta name="keywords" content="javaScript" />
 
 
 
@@ -90,17 +90,23 @@
 
 
 
-<meta name="description" content="每个函数都包含两个非继承而来的方法：applay()和call()。这两个方法的用途都是在特定的作用域中调用函数，实际上等于设置函数体内this对象的值。首先apply()方法接受两个参数：一个是在其中运行函数的作用域，另一个是参数数组。其中，第二个参数可以是Array的实例，也可以是arguments对象。例如：">
-<meta name="keywords" content="随笔">
+<meta name="description" content="##导读文本输入框，相当于OC中的UITextField，在用法和属性方面，两者都有很大的借鉴之处：通过键盘将文本输入到应用程序的一个基本的组件；">
 <meta property="og:type" content="article">
-<meta property="og:title" content="浅谈JavaScript之applay()方法和call()方法">
-<meta property="og:url" content="http://yoursite.com/2014/07/18/call_apply/index.html">
+<meta property="og:title" content="React Native常用组件之TextInput">
+<meta property="og:url" content="http://yoursite.com/2016/08/16/React Native常用组件之TextInput/index.html">
 <meta property="og:site_name" content="hello world">
-<meta property="og:description" content="每个函数都包含两个非继承而来的方法：applay()和call()。这两个方法的用途都是在特定的作用域中调用函数，实际上等于设置函数体内this对象的值。首先apply()方法接受两个参数：一个是在其中运行函数的作用域，另一个是参数数组。其中，第二个参数可以是Array的实例，也可以是arguments对象。例如：">
-<meta property="og:updated_time" content="2017-05-11T06:16:46.970Z">
+<meta property="og:description" content="##导读文本输入框，相当于OC中的UITextField，在用法和属性方面，两者都有很大的借鉴之处：通过键盘将文本输入到应用程序的一个基本的组件；">
+<meta property="og:image" content="http://wx1.sinaimg.cn/mw690/a8a60173ly1ffohcywcdej21160eago2.jpg">
+<meta property="og:image" content="http://wx2.sinaimg.cn/mw690/a8a60173ly1ffohczydkaj215m0qiq87.jpg">
+<meta property="og:image" content="http://wx3.sinaimg.cn/mw690/a8a60173ly1ffohd0mkp8j215w0dydip.jpg">
+<meta property="og:image" content="http://wx1.sinaimg.cn/mw690/a8a60173ly1ffohd1no42j216i0v0dk8.jpg">
+<meta property="og:image" content="http://wx2.sinaimg.cn/mw690/a8a60173ly1ffohd2diayj215s0lk775.jpg">
+<meta property="og:image" content="http://wx4.sinaimg.cn/mw690/a8a60173ly1ffohd30ujrj20ku1120u6.jpg">
+<meta property="og:updated_time" content="2017-05-17T13:53:21.955Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="浅谈JavaScript之applay()方法和call()方法">
-<meta name="twitter:description" content="每个函数都包含两个非继承而来的方法：applay()和call()。这两个方法的用途都是在特定的作用域中调用函数，实际上等于设置函数体内this对象的值。首先apply()方法接受两个参数：一个是在其中运行函数的作用域，另一个是参数数组。其中，第二个参数可以是Array的实例，也可以是arguments对象。例如：">
+<meta name="twitter:title" content="React Native常用组件之TextInput">
+<meta name="twitter:description" content="##导读文本输入框，相当于OC中的UITextField，在用法和属性方面，两者都有很大的借鉴之处：通过键盘将文本输入到应用程序的一个基本的组件；">
+<meta name="twitter:image" content="http://wx1.sinaimg.cn/mw690/a8a60173ly1ffohcywcdej21160eago2.jpg">
 
 
 
@@ -128,13 +134,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2014/07/18/call_apply/"/>
+  <link rel="canonical" href="http://yoursite.com/2016/08/16/React Native常用组件之TextInput/"/>
 
 
 
 
 
-  <title>浅谈JavaScript之applay()方法和call()方法 | hello world</title>
+  <title>React Native常用组件之TextInput | hello world</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -263,7 +269,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2014/07/18/call_apply/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/08/16/React Native常用组件之TextInput/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Mr.Zhu">
@@ -280,7 +286,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">浅谈JavaScript之applay()方法和call()方法</h1>
+          <h1 class="post-title" itemprop="name headline">React Native常用组件之TextInput</h1>
         
 
         <div class="post-meta">
@@ -292,8 +298,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2014-07-18T14:51:22+08:00">
-                2014-07-18
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-08-16T21:54:37+08:00">
+                2016-08-16
               </time>
             
 
@@ -327,34 +333,95 @@
       
 
       
-        <p>每个函数都包含两个非继承而来的方法：applay()和call()。这两个方法的用途都是在特定的作用域中调用函数，实际上等于设置函数体内this对象的值。首先apply()方法接受两个参数：一个是在其中运行函数的作用域，另一个是参数数组。其中，第二个参数可以是Array的实例，也可以是arguments对象。例如：<br><a id="more"></a></p>
+        <p>##导读<br>文本输入框，相当于OC中的UITextField，在用法和属性方面，两者都有很大的借鉴之处：通过键盘将文本输入到应用程序的一个基本的组件；</p>
+<a id="more"></a>
+<p>#TextInput的常见属性<br>因为TextInput是继承自UIView，所以View的属性TextInput也能够使用，一些样式类的属性在学习的时候可以参照View的相关属性。</p>
+<p>###value 字符串型<br>文本输入的默认值</p>
+<p>###onChangeText 函数 </p>
+<p>监听用户输入的值：<br><img src="http://wx1.sinaimg.cn/mw690/a8a60173ly1ffohcywcdej21160eago2.jpg" alt=""></p>
 <blockquote>
-<p>applay():</p>
+<p><strong>keyboardType  键盘类型</strong></p>
 </blockquote>
-<pre><code>function sum(a, b){
-    return a+b;
-}
-function callSum1(a, b){
-    return sum.applay(this, arguments};//传入arguments对象
-}
-function callSum2(a, b){
-    return sum.applay(this, [a, b]);//传入数组
-}
-cc.warn(callSum1(10, 10);// 20;
-cc.warn(callSum2(10, 10);// 20;
-</code></pre><p>在上面的例子中，callSum1在执行sum函数时传入了this作为this值(因为是在全局作用域中调用的)和arguments对象。儿callSum2同样也调用了sum函数，但它传入的则是this和一个参数数组。这两个函数都会正常执行并还回正确的结果!</p>
+<p>决定打开哪种键盘，例如，数字键盘。</p>
+<p><code>enum(&#39;default&#39;, &quot;ascii-capable&quot;, &#39;numbers-and-punctuation&#39;, &#39;url&#39;, &#39;number-pad&#39;, &#39;phone-pad&#39;, &#39;name-phone-pad&#39;, &#39;email-address&#39;, &#39;decimal-pad&#39;, &#39;twitter&#39;, &#39;web-search&#39;, &quot;numeric&quot;)</code></p>
 <blockquote>
-<p>call():</p>
+<p><strong>multiline 布尔型</strong></p>
 </blockquote>
-<p>call()方法与applay()方法的作用相同，他们的区别仅在于接受参数的方式不同。对于call()方法而言，第一个参数是this没有变化，变化的是其余参数都直接传递给函数。换句话说，在使用call()方法时，传递给函数的参数必须逐个列举出来，如下面的例子所示:</p>
-<pre><code>function sum(a, b){
-    return a + b;
-}
-function callSum(a, b){
-    return sum.call(this, a, b);
-}
-cc.warn(callSum(10, 10);// 20;
-</code></pre>
+<p>如果值为真，文本输入可以输入多行。默认值为假。</p>
+<blockquote>
+<p><strong>password 布尔型</strong></p>
+</blockquote>
+<p>如果值为真，文本输入框就成为一个密码区域。默认值为假。</p>
+<blockquote>
+<p><strong>placeholder 字符串型</strong></p>
+</blockquote>
+<p>在文本输入之前字符串将被呈现出来，通常被称为占位文字</p>
+<blockquote>
+<p><strong>placeholderTextColor 字符串型</strong></p>
+</blockquote>
+<p>占位符字符串的文本颜色</p>
+<blockquote>
+<p><strong>autoCapitalize</strong><code>enum(&#39;none&#39;, &#39;sentences&#39;, &#39;words&#39;, &#39;characters&#39;)</code></p>
+</blockquote>
+<p>可以通知文本输入自动利用某些字符。</p>
+<ul>
+<li>characters：所有字符，</li>
+<li>words：每一个单词的首字母</li>
+<li>sentences：每个句子的首字母<code>（默认情况下）</code></li>
+<li>none：不会自动使用任何东西</li>
+</ul>
+<blockquote>
+<p><strong>autoCorrect 布尔型</strong></p>
+</blockquote>
+<p>如果值为假，禁用自动校正。默认值为真。</p>
+<blockquote>
+<p><strong>autoFocus 布尔型</strong></p>
+</blockquote>
+<p>如果值为真，聚焦 componentDidMount 上的文本。默认值为假。</p>
+<blockquote>
+<p><strong>bufferDelay 数值型</strong></p>
+</blockquote>
+<p>这个会帮助避免由于 JS 和原生文本输入之间的竞态条件而丢失字符。默认值应该是没问题的，但是如果你每一个按键都操作的非常缓慢，那么你可能想尝试增加这个。</p>
+<blockquote>
+<p><strong>clearButtonMode</strong> <code>enum(&#39;never&#39;, &#39;while-editing&#39;, &#39;unless-editing&#39;, &#39;always&#39;)</code><br>清除按钮出现在文本视图右侧的时机</p>
+<p><strong>controlled</strong> 布尔型</p>
+</blockquote>
+<p>如果你真想要它表现成一个控制组件，你可以将它的值设置为真，但是按下按键，并且/或者缓慢打字，你可能会看到它闪烁，这取决于你如何处理 onChange 事件。</p>
+<blockquote>
+<p><strong>editable</strong> 布尔型</p>
+</blockquote>
+<p>如果值为假，文本是不可编辑的。默认值为真。</p>
+<blockquote>
+<p><strong>enablesReturnKeyAutomatically</strong> 布尔型</p>
+</blockquote>
+<p>如果值为真，当没有文本的时候键盘是不能返回键值的，当有文本的时候会自动返回。默认值为假。</p>
+<blockquote>
+<p><strong>onBlur</strong> 函数</p>
+</blockquote>
+<p>当文本输入是模糊的，调用回调函数</p>
+<blockquote>
+<p><strong>onChange 函数</strong></p>
+</blockquote>
+<p>当文本输入的文本发生变化时，调用回调函数</p>
+<blockquote>
+<p><strong>onEndEditing</strong> 函数</p>
+<p><strong>onFocus 函数</strong></p>
+</blockquote>
+<p>当输入的文本是聚焦状态时，调用回调函数</p>
+<p><strong>returnKeyType enum</strong><code>(&#39;default&#39;, &#39;go&#39;, &#39;google&#39;, &#39;join&#39;, &#39;next&#39;, &#39;route&#39;, &#39;search&#39;, &#39;send&#39;, &#39;yahoo&#39;, &#39;done&#39;, &#39;emergency-call&#39;)</code><br>决定返回键的样式</p>
+<blockquote>
+<p><strong>secureTextEntry</strong> 布尔型</p>
+</blockquote>
+<p>如果值为真，文本输入框就会使输入的文本变得模糊，以便于像密码这样敏感的文本保持安全。默认值为假。</p>
+<p>#Demo综合演练 — 简单的登录界面</p>
+<p>主要代码：</p>
+<p><img src="http://wx2.sinaimg.cn/mw690/a8a60173ly1ffohczydkaj215m0qiq87.jpg" alt=""></p>
+<p><img src="http://wx3.sinaimg.cn/mw690/a8a60173ly1ffohd0mkp8j215w0dydip.jpg" alt=""></p>
+<p><img src="http://wx1.sinaimg.cn/mw690/a8a60173ly1ffohd1no42j216i0v0dk8.jpg" alt=""></p>
+<p><img src="http://wx2.sinaimg.cn/mw690/a8a60173ly1ffohd2diayj215s0lk775.jpg" alt=""></p>
+<p>运行效果：</p>
+<p><img src="http://wx4.sinaimg.cn/mw690/a8a60173ly1ffohd30ujrj20ku1120u6.jpg" alt=""></p>
+
       
     </div>
 
@@ -381,12 +448,6 @@ cc.warn(callSum(10, 10);// 20;
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/随笔/" rel="tag"># 随笔</a>
-          
-        </div>
-      
 
       
         
@@ -396,8 +457,8 @@ cc.warn(callSum(10, 10);// 20;
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2014/07/05/CSS/" rel="next" title="CSS相关知识">
-                <i class="fa fa-chevron-left"></i> CSS相关知识
+              <a href="/2016/08/13/React Native常用组件之Text/" rel="next" title="React Native常用组件之Text">
+                <i class="fa fa-chevron-left"></i> React Native常用组件之Text
               </a>
             
           </div>
@@ -406,8 +467,8 @@ cc.warn(callSum(10, 10);// 20;
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2015/02/05/Ajax有关知识/" rel="prev" title="Ajax有关知识">
-                Ajax有关知识 <i class="fa fa-chevron-right"></i>
+              <a href="/2016/08/25/FlexBox布局/" rel="prev" title="FlexBox布局">
+                FlexBox布局 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
