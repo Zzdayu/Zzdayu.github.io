@@ -74,7 +74,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="javaScript" />
+  <meta name="keywords" content="随笔," />
 
 
 
@@ -90,15 +90,21 @@
 
 
 
-<meta name="description" content="Will is power">
-<meta property="og:type" content="website">
-<meta property="og:title" content="朱红雨的博客">
-<meta property="og:url" content="http://yoursite.com/archives/2015/03/index.html">
+<meta name="description" content="#一、什么是Text组件？">
+<meta name="keywords" content="随笔">
+<meta property="og:type" content="article">
+<meta property="og:title" content="React Native常用组件之Text">
+<meta property="og:url" content="http://yoursite.com/2016/08/13/React Native常用组件之Text/index.html">
 <meta property="og:site_name" content="朱红雨的博客">
-<meta property="og:description" content="Will is power">
+<meta property="og:description" content="#一、什么是Text组件？">
+<meta property="og:image" content="http://wx2.sinaimg.cn/mw690/a8a60173ly1ffofin4nftj20hs0ez0um.jpg">
+<meta property="og:image" content="http://wx2.sinaimg.cn/mw690/a8a60173ly1ffofinpwqaj20ec03uwf0.jpg">
+<meta property="og:image" content="http://wx1.sinaimg.cn/mw690/a8a60173ly1ffofiodp3pj20hs0ax75f.jpg">
+<meta property="og:updated_time" content="2017-05-17T08:19:51.159Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="朱红雨的博客">
-<meta name="twitter:description" content="Will is power">
+<meta name="twitter:title" content="React Native常用组件之Text">
+<meta name="twitter:description" content="#一、什么是Text组件？">
+<meta name="twitter:image" content="http://wx2.sinaimg.cn/mw690/a8a60173ly1ffofin4nftj20hs0ez0um.jpg">
 
 
 
@@ -126,13 +132,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/archives/2015/03/"/>
+  <link rel="canonical" href="http://yoursite.com/2016/08/13/React Native常用组件之Text/"/>
 
 
 
 
 
-  <title>归档 | 朱红雨的博客</title>
+  <title>React Native常用组件之Text | 朱红雨的博客</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -157,7 +163,7 @@
     
   
 
-  <div class="container sidebar-position-left  page-archive  ">
+  <div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -251,66 +257,198 @@
           <div id="content" class="content">
             
 
-  <section id="posts" class="posts-collapse">
-    <span class="archive-move-on"></span>
+  <div id="posts" class="posts-expand">
+    
 
-    <span class="archive-page-counter">
-      
-      
-      
-        
-      
-      嗯..! 目前共计 15 篇日志。 继续努力。
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/08/13/React Native常用组件之Text/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Mr.Zhu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/me.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="朱红雨的博客">
     </span>
 
     
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">React Native常用组件之Text</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-08-13T14:32:15+08:00">
+                2016-08-13
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
 
       
       
-      
 
+      
+        <p>#一、什么是Text组件？  </p>
+<a id="more"></a>
+<p> 一个用于显示文本的React组件，和Android中的TextView组件或者OC中的Label组件相类似，专门用来显示基本的文本信息；除了基本的显示布局之外，可以进行嵌套显示，设置样式，以及可以做事件(例如:点击)处理；</p>
+<p>#二、Text组件常用的属性方法</p>
+<pre><code>Attributes.style = {
+    color string
+    containerBackgroundColor string
+    fontFamily string
+    fontSize number
+    fontStyle enum(&apos;normal&apos;, &apos;italic&apos;)
+    fontWeight enum(&quot;normal&quot;, &apos;bold&apos;, &apos;100&apos;, &apos;200&apos;, &apos;300&apos;, &apos;400&apos;, &apos;500&apos;, &apos;600&apos;, &apos;700&apos;, &apos;800&apos;, &apos;900&apos;)
+    lineHeight number
+    textAlign enum(&quot;auto&quot;, &apos;left&apos;, &apos;right&apos;, &apos;center&apos;)
+    writingDirection enum(&quot;auto&quot;, &apos;ltr&apos;, &apos;rtl&apos;)
+    numberOfLines number
+    textAlign (&quot;auto&quot;, &apos;left&apos;, &apos;right&apos;, &apos;center&apos;, &apos;justify&apos;)
+    fontWeight (&quot;normal&quot;, &apos;bold&apos;, &apos;100&apos;, &apos;200&apos;, &apos;300&apos;, &apos;400&apos;, &apos;500&apos;, &apos;600&apos;, &apos;700&apos;, &apos;800&apos;, &apos;900&apos;)
+    onPress  fcuntion
+ }
+</code></pre><p>##注释如下：</p>
+<ul>
+<li><code>color</code> 字体颜色</li>
+<li><code>numberOfLines</code> (number) 进行设置Text显示文本的行数，如果显示的内容超过了行数，默认其他多余的信息就不会显示了</li>
+<li><code>onPress</code> (fcuntion)  该方法当文本发生点击的时候调用该方法</li>
+<li><code>color</code>  字体颜色</li>
+<li><code>fontFamily</code>  字体名称</li>
+<li><code>fontSize</code>  字体大小</li>
+<li><code>fontStyle</code>   字体风格(normal,italic)</li>
+<li><code>fontWeight</code> 字体粗细权重(“normal”, ‘bold’, ‘100’, ‘200’, ‘300’, ‘400’, ‘500’, ‘600’, ‘700’, ‘800’, ‘900’)</li>
+<li><code>textShadowOffset</code>  设置阴影效果{width: number, height: number}</li>
+<li><code>textShadowRadius</code>  阴影效果圆角</li>
+<li><code>textShadowColor</code>  阴影效果的颜色</li>
+<li><code>letterSpacing</code>  字符间距</li>
+<li><code>lineHeight</code>  行高</li>
+<li><code>textAlign</code>   文本对其方式(“auto”, ‘left’, ‘right’, ‘center’, ‘justify’)</li>
+<li><code>textDecorationLine</code>  横线位置 (“none”, ‘underline’, ‘line-through’, ‘underline line-through’)</li>
+<li><code>textDecorationStyle</code> 线的风格(“solid”, ‘double’, ‘dotted’, ‘dashed’)</li>
+<li><code>textDecorationColor</code> 线的颜色</li>
+<li><code>writingDirection</code> 文本方向(“auto”, ‘ltr’, ‘rtl’)</li>
+</ul>
+<p>#三、Text组件中常用属性的应用</p>
+<p><img src="http://wx2.sinaimg.cn/mw690/a8a60173ly1ffofin4nftj20hs0ez0um.jpg" alt=""></p>
+<p>运行结果如下：<br><img src="http://wx2.sinaimg.cn/mw690/a8a60173ly1ffofinpwqaj20ec03uwf0.jpg" alt=""></p>
+<p>#四、Text组件中样式的继承<br>在React-native中是没有样式继承这种说法的， 但是对于Text元素里边的Text元素，其实是能够继承的，那么是单层继承还是多层继承？</p>
+<p>代码演示：</p>
+<p><img src="http://wx1.sinaimg.cn/mw690/a8a60173ly1ffofiodp3pj20hs0ax75f.jpg" alt=""></p>
+<p><strong>结论：文字控制类的属性也是多重继承的，和css中是一样的</strong></p>
+
+      
+    </div>
+
+    <div>
       
         
-        <div class="collection-title">
-          <h2 class="archive-year motion-element" id="archive-year-2015">2015</h2>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/随笔/" rel="tag"># 随笔</a>
+          
         </div>
       
+
+      
+        
       
 
       
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/08/12/React Native常用组件之View/" rel="next" title="React Native常用组件之View">
+                <i class="fa fa-chevron-left"></i> React Native常用组件之View
+              </a>
+            
+          </div>
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+          <span class="post-nav-divider"></span>
 
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2015/03/05/http协议/" itemprop="url">
-              
-                <span itemprop="name">HTTP协议</span>
-              
-            </a>
-        
-      </h2>
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/08/25/FlexBox布局/" rel="prev" title="FlexBox布局">
+                FlexBox布局 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2015-03-05T23:21:55+08:00"
-              content="2015-03-05" >
-          03-05
-        </time>
-      </div>
-
-    </header>
+      
+      
+    </footer>
   </article>
 
 
 
-    
-
-  </section>
-
-  
-
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -318,6 +456,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -520,11 +662,9 @@
 
 
   
-  
-    <script type="text/javascript" id="motion.page.archive">
-      $('.archive-year').velocity('transition.slideLeftIn');
-    </script>
-  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
 
 
   
