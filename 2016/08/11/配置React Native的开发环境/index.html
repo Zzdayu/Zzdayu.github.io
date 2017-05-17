@@ -1,0 +1,824 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="javaScript" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.1" />
+
+
+
+
+
+
+<meta name="description" content="————-如果你使用的是Mac OS系统,请参照以下步骤———–">
+<meta property="og:type" content="article">
+<meta property="og:title" content="配置React Native的开发环境">
+<meta property="og:url" content="http://yoursite.com/2016/08/11/配置React Native的开发环境/index.html">
+<meta property="og:site_name" content="朱红雨的博客">
+<meta property="og:description" content="————-如果你使用的是Mac OS系统,请参照以下步骤———–">
+<meta property="og:image" content="http://wx2.sinaimg.cn/mw690/a8a60173ly1ffo7evsqnaj20ja06pjsv.jpg">
+<meta property="og:image" content="http://wx2.sinaimg.cn/mw690/a8a60173ly1ffo7jgu88zj20u80b60v9.jpg">
+<meta property="og:image" content="http://wx1.sinaimg.cn/mw690/a8a60173ly1ffo7ngcpcrj210o06q76i.jpg">
+<meta property="og:image" content="http://wx1.sinaimg.cn/mw690/a8a60173ly1ffo89pnavej218i0ml76x.jpg">
+<meta property="og:image" content="http://wx4.sinaimg.cn/mw690/a8a60173ly1ffo8b31368j218g0u578r.jpg">
+<meta property="og:image" content="http://wx1.sinaimg.cn/mw690/a8a60173ly1ffo8gaqa8ij210y0rk76n.jpg">
+<meta property="og:image" content="http://wx1.sinaimg.cn/mw690/a8a60173ly1ffo8kks0faj21jm114tjm.jpg">
+<meta property="og:image" content="http://wx2.sinaimg.cn/mw690/a8a60173ly1ffo8klr39dj218410s45h.jpg">
+<meta property="og:image" content="http://wx3.sinaimg.cn/mw690/a8a60173ly1ffo9y4obq9j21jm1147fi.jpg">
+<meta property="og:image" content="http://wx2.sinaimg.cn/mw690/a8a60173ly1ffoa3tp7y3j20wg0k6q6g.jpg">
+<meta property="og:image" content="http://wx3.sinaimg.cn/mw690/a8a60173ly1ffoa5v39lsj21kw1097b9.jpg">
+<meta property="og:image" content="http://wx1.sinaimg.cn/mw690/a8a60173ly1ffoab5snejj212e0yo10b.jpg">
+<meta property="og:image" content="http://wx4.sinaimg.cn/mw690/a8a60173ly1ffoab6feiyj20pi16yjue.jpg">
+<meta property="og:image" content="http://wx4.sinaimg.cn/mw690/a8a60173ly1ffoab72xe6j20ks03edgy.jpg">
+<meta property="og:image" content="http://wx1.sinaimg.cn/mw690/a8a60173ly1ffoab7rl46j20oy0esgnt.jpg">
+<meta property="og:image" content="http://wx1.sinaimg.cn/mw690/a8a60173ly1ffoab8gqdwj21kw0cb41c.jpg">
+<meta property="og:updated_time" content="2017-05-17T05:48:48.342Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="配置React Native的开发环境">
+<meta name="twitter:description" content="————-如果你使用的是Mac OS系统,请参照以下步骤———–">
+<meta name="twitter:image" content="http://wx2.sinaimg.cn/mw690/a8a60173ly1ffo7evsqnaj20ja06pjsv.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2016/08/11/配置React Native的开发环境/"/>
+
+
+
+
+
+  <title>配置React Native的开发环境 | 朱红雨的博客</title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">朱红雨的博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/随笔" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/08/11/配置React Native的开发环境/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Mr.Zhu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/me.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="朱红雨的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">配置React Native的开发环境</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-08-11T23:10:33+08:00">
+                2016-08-11
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>————-如果你使用的是Mac OS系统,请参照以下步骤———–</p>
+<a id="more"></a>
+<blockquote>
+<p>安装前注意：</p>
+</blockquote>
+<p>1）在Max OS X 10.11（El Capitan)版本中，homebrew在安装软件时可能会碰到/usr/local目录不可写的权限问题。可以使用下面的命令修复：</p>
+<pre><code>sudo chown -R `whoami` /usr/local
+</code></pre><p>2）如果命令行提示command not found，请加上sudo获得最高权限</p>
+<p>##一、环境需求 </p>
+<p>###1.1  安装Homebrew<br>Homebrew是OS X的套件(包)管理器，用于安装Node.js和一些其他必须的工具软件。</p>
+<p>###安装方式:<br>ruby -e “$(curl -fsSL <a href="https://raw.githubusercontent.com/Homebrew/install/master/install" target="_blank" rel="external">https://raw.githubusercontent.com/Homebrew/install/master/install</a>)”</p>
+<h3 id="1-2-安装npm-和-Node-js"><a href="#1-2-安装npm-和-Node-js" class="headerlink" title="1.2  安装npm 和 Node.js"></a>1.2  安装npm 和 Node.js</h3><p> Node.js最好安装5.0及其以上更高版本，node安装成功后npm自动也就有了，直接下载安装Node.js。</p>
+<pre><code>brew install node
+</code></pre><p>###1.3  安装WatchMan</p>
+<p>  WatchMan是由Facebook提供的监视文件系统变更的工具。安装此工具可以提高开发时的性能（packager可以快速捕捉文件的变化从而实现实时刷新）。</p>
+<pre><code>brew install watchman
+</code></pre><p> 验证是否安装成功<br><img src="http://wx2.sinaimg.cn/mw690/a8a60173ly1ffo7evsqnaj20ja06pjsv.jpg" alt=""></p>
+<p>###1.4  安装Flow</p>
+<p>low是一个 JavaScript 的静态类型检查器。这一语法并不属于ES标准，只是Facebook自家的代码规范。所以新手可以直接跳过（即不需要安装这一工具，也不建议去费力学习flow相关语法）。</p>
+<pre><code>brew install flow
+</code></pre><p>验证是否安装成功</p>
+<p><img src="http://wx2.sinaimg.cn/mw690/a8a60173ly1ffo7jgu88zj20u80b60v9.jpg" alt=""></p>
+<p>##二、React Native安装</p>
+<p>###2.1  Yarn、React Native的命令行工具（react-native-cli）</p>
+<p>  Yarn是Facebook提供的替代npm的工具，可以加速node模块的下载。React Native的命令行工具用于执行创建、初始化、更新项目、运行打包服务（packager）等任务。</p>
+<pre><code>npm install -g yarn react-native-cli
+</code></pre><p>##2.2 安装截图如下:</p>
+<p><img src="http://wx1.sinaimg.cn/mw690/a8a60173ly1ffo7ngcpcrj210o06q76i.jpg" alt=""></p>
+<p>————-如果你使用的是Windows系统,请参照以下步骤———–</p>
+<p>##一、确保所有的命令行操作都在管理员权限下操作</p>
+<p>##二、需要安装的插件</p>
+<p>###2.1 Chocolatey<br> Chocolatey是一个Windows上的包管理器，类似于Mac上的watchMan。一般的安装步骤应该是下面这样, 如果国内访问失败, 请使用翻墙工具:</p>
+<pre><code>@powershell -NoProfile -ExecutionPolicy Bypass -Command &quot;iex ((new-object net.webclient).DownloadString(&apos;https://chocolatey.org/install.ps1&apos;))&quot; &amp;&amp; SET PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin
+</code></pre><p>###2.2  Python 2<br>    choco install python2</p>
+<p>###2.3 Node</p>
+<p>打开命令提示符窗口，使用Chocolatey来安装NodeJS.</p>
+<pre><code>choco install nodejs.install
+</code></pre><p>安装完node后建议设置npm镜像以加速后面的过程（或使用科学上网工具）。</p>
+<pre><code>npm config set registry https://registry.npm.taobao.org --globalnpm config set disturl https://npm.taobao.org/dist --global
+</code></pre><p>————-以下步骤为公共步骤———–</p>
+<p>##三、 ios开发环境需求</p>
+<p>Xcode 8 及其以上更高版本</p>
+<p>##四、 Android开发环境需求</p>
+<p>###安装最新版的JDK:</p>
+<p>你可以在命令行中输入 javac -version来查看你当前安装的JDK版本。下载安装地址：<a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html" target="_blank" rel="external">http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html </a> （资料中已经存放）</p>
+<p>####建议安装Android studio，在安装过程中请严格执行以下选项：<br>1）选择 Custom 选项</p>
+<p><img src="http://wx1.sinaimg.cn/mw690/a8a60173ly1ffo89pnavej218i0ml76x.jpg" alt=""></p>
+<p>2）勾选Performance和Android Virtual Device</p>
+<p><img src="http://wx4.sinaimg.cn/mw690/a8a60173ly1ffo8b31368j218g0u578r.jpg" alt=""></p>
+<p>3）安装完成后，在Android Studio的启动欢迎界面中选择Configure | SDK Manager<br><img src="http://wx1.sinaimg.cn/mw690/a8a60173ly1ffo8gaqa8ij210y0rk76n.jpg" alt=""></p>
+<p>4）在SDK Platforms窗口中，选择Show Package Details，然后在Android 6.0 (Marshmallow)中勾选Google APIs、Android SDK Platform 23、Intel x86 Atom System Image、Intel x86 Atom_64 System Image以及Google APIs Intel x86 Atom_64 System Image。</p>
+<p><img src="http://wx1.sinaimg.cn/mw690/a8a60173ly1ffo8kks0faj21jm114tjm.jpg" alt=""></p>
+<p><img src="http://wx2.sinaimg.cn/mw690/a8a60173ly1ffo8klr39dj218410s45h.jpg" alt=""></p>
+<p>5）在SDK Tools窗口中，选择Show Package Details，然后在Android SDK Build Tools中勾选Android SDK Build-Tools 23.0.1（必须是这个版本）。然后还要勾选最底部的Android Support Repository。</p>
+<p><img src="http://wx3.sinaimg.cn/mw690/a8a60173ly1ffo9y4obq9j21jm1147fi.jpg" alt=""></p>
+<p>6）ANDROID_HOME环境变量</p>
+<p>确保ANDROID_HOME环境变量正确地指向了你安装的Android SDK的路径。具体的做法是把下面的命令加入到~/.bash_profile文件中，使用  vi ~/.bash_profile。</p>
+<p>如果你不是通过Android Studio安装的sdk，则其路径可能不同，请自行确定清楚。</p>
+<p>export ANDROID_HOME=~/Library/Android/sdk</p>
+<p>然后使用下列命令使其立即生效：</p>
+<pre><code>source ~/.bash_profile
+</code></pre><p>可以使用<code>echo $ANDROID_HOME</code>检查此变量是否已正确设置。</p>
+<p>###4.1  安装Genymotion</p>
+<p>Genymotion是一个第三方模拟器，它比Google官方的模拟器更易设置且性能更好。但是，它只针对个人用户免费。</p>
+<p>1）下载并安装Genymotion<br> <a href="https://www.genymotion.com/" target="_blank" rel="external"> https://www.genymotion.com/</a></p>
+<p>2）打开Genymotion,如果你尚未安装VirtualBox,它有可能会提示你安装</p>
+<p>3）创建一个模拟器并启动</p>
+<p>4）按下⌘+M可以打开开发者菜单(在安装并启动了React Native应用之后)</p>
+<p>###4.2  Gradle Daemon</p>
+<p>开启Gradle Daemon可以极大地提升java代码的增量编译速度。</p>
+<p>touch ~/.gradle/gradle.properties &amp;&amp; echo “org.gradle.daemon=true” &gt;&gt; ~/.gradle/gradle.properties</p>
+<p>##五、 React Native的第一个应用</p>
+<p>###5.1 执行命令,生成一个工程 react-native init 项目名称</p>
+<p>注意:由于众所周知的网络原因，需要等待一段时间（具体视网络情况而定）。react-native命令行从npm官方源拖代码时会遇上麻烦，可以将npm仓库源替换为国内镜像：</p>
+<pre><code>npm config set registry https://registry.npm.taobao.org
+npm config set disturl https://npm.taobao.org/dist
+</code></pre><p>###5.2  运行截图<br><img src="http://wx2.sinaimg.cn/mw690/a8a60173ly1ffoa3tp7y3j20wg0k6q6g.jpg" alt=""></p>
+<p>###5.3 目录结构截图</p>
+<p>####目录结构分析:</p>
+<p>a）默认生成android和ios两个平台的原生项目；</p>
+<p>b）其中，index.android.js和index.ios.js文件为Android和iOS的空壳应用文件；</p>
+<p>c）此外，node_modules文件夹，是为Node.js存放和管理npm包资源，也包含React Native框架文件。</p>
+<p>####查看index.ios.js中的代码:<br><img src="http://wx3.sinaimg.cn/mw690/a8a60173ly1ffoa5v39lsj21kw1097b9.jpg" alt=""></p>
+<p>###六、运行工程文件<br>不管是 iOS 还是 Android，在开发调试阶段，都需要在 Mac 上启动一个 HTTP 服务，称为Debug Server，默认运行在 8081 端口，APP 通 Debug Server 加载 js。</p>
+<p>####6.1 打开Xcode，运行你的第一个React Native创建的iOS应用</p>
+<p><img src="http://wx1.sinaimg.cn/mw690/a8a60173ly1ffoab5snejj212e0yo10b.jpg" alt=""></p>
+<p>图1 - 启动React native 服务器<br><img src="http://wx4.sinaimg.cn/mw690/a8a60173ly1ffoab6feiyj20pi16yjue.jpg" alt=""></p>
+<p> 图2 - 客户端运行界面</p>
+<p>###6.2 把React Native创建的应用跑在Android上<br>a) 命令行执行cd SeeMyGoProduct,路径切换到项目主目录</p>
+<p>b) 命令行执行react-native run-android进行加载运行android 应<br>用。</p>
+<p>c) 使用编辑器进行打开和修改index.android.js文件，接着通过菜单按钮选择Reload JS来进行刷新修改</p>
+<p>###七、管理React Native库的版本</p>
+<p>在开发中，会经常的去控制React Native的版本库，得以适配各种条件下的开发，那该如何查看、控制ReactNative的版本呢？</p>
+<p>###7.1 查看本地的React Native的版本<br>  命令行输入</p>
+<pre><code>react-native --version
+</code></pre><p>  命令行效果<br><img src="http://wx4.sinaimg.cn/mw690/a8a60173ly1ffoab72xe6j20ks03edgy.jpg" alt=""></p>
+<p>###7.2 更新本地的React Native的版本<br>命令行输入</p>
+<pre><code>npm update -g react-native-cli
+</code></pre><p>###7.3 查询react-native的npm包最新版本<br>NPM的全称是Node Package Manager ，是一个NodeJS包管理和分发工具，已经成为了非官方的发布Node模块（包）的标准。<br>npm包地址 ：<a href="https://www.npmjs.com/package/react-native" target="_blank" rel="external">https://www.npmjs.com/package/react-native</a></p>
+<p>命令行查询</p>
+<pre><code>npm info react-native
+</code></pre><p>查询效果</p>
+<p><img src="http://wx1.sinaimg.cn/mw690/a8a60173ly1ffoab7rl46j20oy0esgnt.jpg" alt=""></p>
+<p>项目中查看<br><img src="http://wx1.sinaimg.cn/mw690/a8a60173ly1ffoab8gqdwj21kw0cb41c.jpg" alt=""></p>
+<p>###7.4 升级或者降级npm包的版本<br>    npm install –save react-native@0.18</p>
+<p>###7.5 更新项目templates文件（可选）</p>
+<p> 新的npm包会包含更新在运行react-native init命令生成的一些动态文件，例如init创建项目的时候会生成iOS和Android的子项目，我们可以通过以下的命令进行获取最新的代码<br>命令行查询</p>
+<pre><code>react-native upgrade
+</code></pre><p>##八、WebStom设置React Native代码提示</p>
+<p>###8.1  从gitHub上下载xml插件</p>
+<pre><code>git clone https://github.com/virtoolswebplayer/ReactNative-LiveTemplate  
+</code></pre><p>###8.2  安装</p>
+<p>将ReactNative.xml复制到 ~/Library/Preferences/WebStorm10/templates ，然后重启 WebStrom。</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/07/12/C3动画/" rel="next" title="C3动画">
+                <i class="fa fa-chevron-left"></i> C3动画
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/08/12/React Native常用组件之View/" rel="prev" title="配置React Native的开发环境">
+                配置React Native的开发环境 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/me.jpg"
+               alt="Mr.Zhu" />
+          <p class="site-author-name" itemprop="name">Mr.Zhu</p>
+           
+              <p class="site-description motion-element" itemprop="description">Will is power</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">13</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">标签</span>
+              
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-安装npm-和-Node-js"><span class="nav-number">1.</span> <span class="nav-text">1.2  安装npm 和 Node.js</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2014 - 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Mr.Zhu</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+  
+  <script type="text/javascript" src="/lib/three/three.min.js"></script>
+
+  
+  <script type="text/javascript" src="/lib/three/three-waves.min.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
